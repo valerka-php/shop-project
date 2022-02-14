@@ -16,56 +16,39 @@
 <body>
 <header class="header">
     <div class="dropdown">
-            <button class="btn btn-outline-light dropdown-toggle bi bi-stack " role="button" id="dropdownMenuLink"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <ul class="nav nav-pills mb-3 list" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link " id="pills-phone-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="true">first
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">second
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">third
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-fourd-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">fourd
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-fifth-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">fifth
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-sixth-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">sixth
-                        </button>
-                    </li>
-                </ul>
+        <button class="btn btn-outline-light dropdown-toggle bi bi-stack " role="button" id="dropdownMenuLink"
+                data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <ul class="nav nav-pills mb-3 list" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-bicycle-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-bicycle" type="button" role="tab" aria-controls="pills-bicycle"
+                            aria-selected="true"><img class="img-nav-item" src="img/track-bicycle.png">
+                    </button>
+
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-motorcycle-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-motorcycle" type="button" role="tab" aria-controls="pills-motorcycle"
+                            aria-selected="false"><img class="img-nav-item" src="img/motorcycle.png">
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-cars" type="button" role="tab" aria-controls="pills-cars"
+                            aria-selected="false"><img class="img-nav-item" src="img/sedan.png">
+                    </button>
+                </li>
             </ul>
-        </div>
+        </ul>
+    </div>
     <div class="btn-home">
         <a class="btn btn-outline-light bi bi-house" href="/"></a>
     </div>
     <div class="search bi bi-search">
         <input class="input-search" placeholder="what do you want ?"/>
-        <button class="btn btn-outline-light btn-search"> search </button>
+        <button class="btn btn-outline-light btn-search"> search</button>
     </div>
     <div class="contacts">
         <button type="button" class="btn btn-outline-light bi bi-at"></button>
@@ -82,199 +65,236 @@
 
 </header>
 <main class="main">
-    <section class="content">
-        <div class="tab-content " id="pills-tabContent ">
-            <div class=" show active img-home" role="tabpanel" aria-labelledby="pills-home-tab" >
-
-            </div>
-            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="content">
+    <section>
+        <div class="tab-content" id="pills-tabContent ">
+            <div class="tab-pane fade " id="pills-bicycle" role="tabpanel" aria-labelledby="pills-bicycle-tab"F>
+                <div class="content background-shop">
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/1.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/2.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/3.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/4.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/5.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/6.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/7.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="content">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/7.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="content">
+            <div class="tab-pane fade" id="pills-motorcycle" role="tabpanel" aria-labelledby="pills-motorcycle-tab">
+                <div class="content background-shop">
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/moto1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/moto2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/moto3.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/moto4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/moto5.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="img/moto6.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/moto7.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-cars" role="tabpanel" aria-labelledby="pills-cars-tab">
+                <div class="content background-shop">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/car1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/car2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/car3.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/car4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/car5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">additional info</a>
+                            <button class="btn btn-outline-success bi bi-bag"> buy </button>
                         </div>
                     </div>
                 </div>
