@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edb98b44-0f88-4d7c-bf6c-67ad3b63b7da" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/sing_in.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,11 +57,25 @@
       <workItem from="1644763394658" duration="11223000" />
       <workItem from="1644784236989" duration="7502000" />
       <workItem from="1644845860803" duration="14317000" />
-      <workItem from="1644868643771" duration="7461000" />
+      <workItem from="1644868643771" duration="8089000" />
+      <workItem from="1644887972077" duration="1317000" />
+      <workItem from="1644889352974" duration="3309000" />
+      <workItem from="1644920805259" duration="5489000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,31 +1,30 @@
 .main {
     color: darkblue;
     margin-top: 45px;
-    margin-left:200px;
+    margin-left: 200px;
 }
 
 
-.list{
+.list {
     display: flex;
     flex-direction: column;
     font-size: 25px;
     width: auto;
 }
 
-.category-header{
+.category-header {
     font-size: 20px;
     display: flex;
     justify-content: center;
 }
 
-.dropdown{
+.dropdown {
     display: flex;
     align-items: center;
 }
 
 
-
-.contacts{
+.contacts {
     color: white;
     font-size: 25px;
     width: 150px;
@@ -36,14 +35,14 @@
     margin-right: 55px;
 }
 
-.btn-order{
+.btn-order {
     width: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.input-search{
+.input-search {
     height: 35px;
     margin-right: 7px;
     margin-left: 7px;
@@ -51,7 +50,7 @@
     border: none;
 }
 
-.btn-search{
+.btn-search {
     display: flex;
     align-items: center;
     background-color: forestgreen;
@@ -60,7 +59,7 @@
     height: 35px
 }
 
-.search{
+.search {
     height: 35px;
     background-color: white;
     border-radius: 15px;
@@ -71,7 +70,7 @@
 
 }
 
-.btn-sing-in{
+.btn-sing-in {
     padding: 5px;
     width: 55px;
     display: flex;
@@ -79,88 +78,102 @@
     justify-content: center;
 }
 
-.btn-home{
+.btn-home {
     margin-left: 15px;
 }
 
 
-.margin-left{
+.margin-left {
     margin-left: 7px;
     font-size: 25px;
 }
 
-.nav-item:hover{
+.nav-item:hover {
     background-color: lightgrey;
 }
 
-.bi-bag{
+.bi-bag {
     margin-left: 35px;
 }
 
-.nav-item{
+.nav-item {
     width: 176px;
     display: flex;
     justify-content: center;
 }
 
-.img-nav-item{
+.img-nav-item {
     width: 75px;
     height: auto;
     font-size: 35px;
 }
 
-.bi-bicycle{
+.bi-bicycle {
     font-size: 35px;
     width: 195px;
 }
 
-.card-img-top{
+.card-img-top {
     width: auto;
     height: 185px;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     background-color: gainsboro;
     min-width: 198px;
 }
 
-.content{
+.content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
-.img-order{
-    background-image: url("../img/order-img.jpg");
+.modal-title {
+    font-size: 25px;
+    color: black;
 }
 
-.modal-header{
-    height: 20px;
+.modal-header {
+    background-color: darkgrey;
+    height: 30px;
+}
+
+.modal-footer {
+    justify-content: space-between;
 }
 
 
+.img-list {
+    width: 95px;
+    margin-top: 7px;
+}
 
-.modal-footer{
+.modal-order .btn-close {
+    margin-left: 55px;
+
+}
+
+.modal-order {
+    overflow: auto;
+    position: relative;
+    margin-top: 7px;
+}
+
+.modal-content {
+    height: 460px;
+    width: 650px;
     display: flex;
     justify-content: space-between;
-    height: 0;
 }
 
-.modal-order{
-    overflow: auto;
-}
-
-.modal-content{
-    height: 260px;
-}
-
-.background-shop{
+.background-shop {
     background-color: gainsboro;
 }
 
 
-.card{
+.card {
     top: 15px;
     background-color: whitesmoke;
     margin-right: 25px;
@@ -190,11 +203,61 @@
     background-color: aqua;
 }
 
-.modal-price{
+.modal-price {
     color: black;
+    padding: 15px;
     background-color: forestgreen;
     height: 35px;
     display: flex;
     align-items: center;
     border-radius: 7px;
+}
+
+.sing-in-form {
+    border-radius: 15px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 75px auto;
+    padding: 15px;
+    width: 350px;
+}
+
+.btn-login {
+    margin-top: 15px;
+}
+
+.description-list {
+    width: 350px;
+}
+
+.order-tabs {
+    background-color: lightgrey;
+}
+
+.product {
+    display: flex;
+    justify-content: start;
+    height: 250px;
+}
+
+.product-cart {
+    padding: 15px;
+    margin-left: 95px;
+    background-color: darkgrey;
+    width: 350px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+.price {
+    font-size: 55px;
+    color: red;
+}
+
+
+.bg-img {
+    background-image: url("../img/online-shop.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
