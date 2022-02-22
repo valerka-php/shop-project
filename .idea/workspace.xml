@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edb98b44-0f88-4d7c-bf6c-67ad3b63b7da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/car3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moto1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moto2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moto3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moto4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moto5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moto6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moto7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sedan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/track-bicycle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/additional-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/additional-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/sing-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/sing-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="edb98b44-0f88-4d7c-bf6c-67ad3b63b7da" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +70,7 @@
       <workItem from="1645452957085" duration="3033000" />
       <workItem from="1645526937783" duration="8897000" />
       <workItem from="1645537330861" duration="3739000" />
+      <workItem from="1645550599378" duration="122000" />
     </task>
     <servers />
   </component>
