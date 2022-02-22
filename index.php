@@ -15,16 +15,15 @@
 </head>
 <body class="bg-img">
 <header class="header">
-<!--    --><?php //include 'include/autoloader.inc.php'?>
-    <?php include 'classes/MainClass.php'?>
+    <?php include 'include/autoloader.inc.php'?>
     <?php require_once 'block/header.php' ?>
-
+    <?php error_reporting(E_ALL) ?>
+<!--    --><?php
+//    $obj = new Render();
+//    $obj->getRender();
+//    ?>
 </header>
 <main class="main">
-    <?php
-    $obj = new MainClass();
-    $obj->getName();
-    ?>
     <?php require_once 'include/cart.inc.php' ?>
     <section>
         <div class="tab-content" id="pills-tabContent ">

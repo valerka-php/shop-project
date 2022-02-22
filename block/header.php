@@ -34,5 +34,5 @@
             data-bs-target="#staticBackdrop"></button>
 </div>
 <div class="btn-sing-in">
-    <a class="btn btn-outline-light bi bi-person-circle" href="include/sing-in.inc.html"></a>
+    <a class="btn btn-outline-light bi bi-person-circle" href="include/sing-in.inc.php"></a>
 </div>
