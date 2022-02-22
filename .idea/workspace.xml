@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edb98b44-0f88-4d7c-bf6c-67ad3b63b7da" name="Changes" comment="" />
+    <list default="true" id="edb98b44-0f88-4d7c-bf6c-67ad3b63b7da" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/additional-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/additional-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/cart.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/sing-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/sing-in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +77,7 @@
       <workItem from="1645526937783" duration="8897000" />
       <workItem from="1645537330861" duration="3739000" />
       <workItem from="1645550599378" duration="122000" />
+      <workItem from="1645552162560" duration="309000" />
     </task>
     <servers />
   </component>
