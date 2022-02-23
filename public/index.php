@@ -15,8 +15,8 @@
 </head>
 <body class="bg-img">
 <header class="header">
-    <?php include 'include/autoloader.inc.php'?>
-    <?php require_once 'block/header.php' ?>
+    <?php include '../src/autoloader/autoloader.php'?>
+    <?php require_once '../app/views/layouts/header.php' ?>
     <?php error_reporting(E_ALL) ?>
 <!--    --><?php
 //    $obj = new Render();
@@ -24,10 +24,10 @@
 //    ?>
 </header>
 <main class="main">
-    <?php require_once 'include/cart.inc.php' ?>
+    <?php require_once '../app/views/layouts/cart.php' ?>
     <section>
         <div class="tab-content" id="pills-tabContent ">
-            <?php $productList = include 'inventory/product_list.php' ?>
+            <?php $productList = include '../src/inventory/product_list.php' ?>
             <?php foreach ($productList as $category => $list) : ?>
                 <div class="tab-pane fade " id="<?= 'pills-' . $category ?>" role="tabpanel"
                      aria-labelledby="<?= 'pills-' . $category . '-tab' ?>">
@@ -41,7 +41,7 @@
                                         the bulk of the card's content.</p>
                                     <hr>
                                     <div class="pay">
-                                        <a href="include/additional-info.inc.html" class="btn btn-primary">additional
+                                        <a href="additional-info.php" class="btn btn-primary">additional
                                             info</a>
                                         <hr>
                                         <button class="btn btn-outline-success bi bi-bag"> <?= 'buy $' . $list[$i - 1]['price'] ?></button>

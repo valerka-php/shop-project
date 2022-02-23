@@ -8,28 +8,16 @@
             </div>
             <div class="modal-order">
                 <ol>
-                    <li><img class="img-list" src="img/1.jpeg"> bicycle <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
-                    <li><img class="img-list" src="img/2.jpeg"> bicycle <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
-                    <li><img class="img-list" src="img/3.jpeg"> bicycle <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
-                    <li><img class="img-list" src="img/7.jpeg"> bicycle <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
                     <li><img class="img-list" src="img/car4.jpg"> car <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
-                    <li><img class="img-list" src="img/car3.jpeg"> car <b>: 155 USD</b>
+                    <li><img class="img-list" src="img/car3.jpg"> car <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
-                    <li><img class="img-list" src="img/moto5.png"> motorcycle <b>: 155 USD</b>
+                    <li><img class="img-list" src="img/motorcycle1.jpg"> motorcycle <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
-                    <li><img class="img-list" src="img/moto3.jpg"> motorcycle <b>: 155 USD</b>
+                    <li><img class="img-list" src="img/motorcycle3.jpg"> motorcycle <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
                 </ol>

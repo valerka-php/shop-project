@@ -4,7 +4,7 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <ul class="nav nav-pills mb-3 list" id="pills-tab" role="tablist">
-            <?php $productArr = include 'inventory/product_list.php'; ?>
+            <?php $productArr = include '../src/inventory/product_list.php'; ?>
             <?php foreach ($productArr as $category => $list) : ?>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="<?= $category . '-tab' ?>" data-bs-toggle="pill"
@@ -34,5 +34,5 @@
             data-bs-target="#staticBackdrop"></button>
 </div>
 <div class="btn-sing-in">
-    <a class="btn btn-outline-light bi bi-person-circle" href="include/sing-in.inc.php"></a>
+    <a class="btn btn-outline-light bi bi-person-circle" href="sing-in.php"></a>
 </div>

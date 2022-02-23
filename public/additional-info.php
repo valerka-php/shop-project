@@ -11,7 +11,7 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <ul class="nav nav-tabs order-tabs" id="myTab" role="tablist">
@@ -31,7 +31,7 @@
         </button>
     </li>
     <div class="btn-home" style="margin-left: auto;margin-right: 25px">
-        <a class="btn btn-outline-light bi bi-house" href="https://valerka-php.github.io/nix-practice/"></a>
+        <a class="btn btn-outline-light bi bi-house" href="/"></a>
     </div>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -39,7 +39,7 @@
         <h1>Bicycle</h1>
         <hr>
         <div class="product">
-            <img src="../img/bicycle1.jpg">
+            <img src="img/motorcycle1.jpg">
             <div class="product-cart">
                 <h5>Sale Price:</h5>
                 <p class="price">$155.00</p>
