@@ -2,45 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edb98b44-0f88-4d7c-bf6c-67ad3b63b7da" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/default.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Log/exception.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/block/header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/RenderClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Render.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bicycle8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/car.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/car1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/car2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/car3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/car4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/car5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/motorcycle7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/online-shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/order-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/shop-bck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/shop-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/additional-info.inc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/autoloader.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/cart.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/sing-in.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/product_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/autoloader/autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/autoloader/autoloader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Render.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Render.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,12 +54,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app/views/layouts/layouts" />
@@ -124,7 +94,8 @@
       <workItem from="1645624473108" duration="122000" />
       <workItem from="1645631178298" duration="69000" />
       <workItem from="1645631251726" duration="231000" />
-      <workItem from="1645638721610" duration="3372000" />
+      <workItem from="1645638721610" duration="6295000" />
+      <workItem from="1645654085351" duration="4027000" />
     </task>
     <servers />
   </component>
