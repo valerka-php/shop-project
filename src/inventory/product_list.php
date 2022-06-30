@@ -43,11 +43,11 @@ return [
             'count' => '15',
         ]
     ],
-    'motorcycle'=> [
+    'motorcycle' => [
         ['id' => '1',
-        'name' => 'motorcycle1',
-        'price' => '23423',
-        'count' => '52',
+            'name' => 'motorcycle1',
+            'price' => '23423',
+            'count' => '52',
         ],
         ['id' => '2',
             'name' => 'motorcycle2',
@@ -75,7 +75,7 @@ return [
             'count' => '36',
         ]
     ],
-    'car'=>[
+    'car' => [
         ['id' => '1',
             'name' => 'car1',
             'price' => '15544',
