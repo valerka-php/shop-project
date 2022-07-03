@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Render
 {
     public function getRender(string $layout, array $params, string $view)
@@ -16,5 +18,10 @@ class Render
             $render = '';
         }
         return $render;
+    }
+
+    public function test()
+    {
+        echo 'TEst RENDER';
     }
 }

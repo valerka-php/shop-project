@@ -19,9 +19,6 @@
 </header>
 <main class="main">
     <?php require_once '../app/views/layouts/cart.php' ?>
-    <section>
-
-    </section>
 </main>
 </body>
 </html>

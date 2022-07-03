@@ -39,7 +39,7 @@
         <h1>Bicycle</h1>
         <hr>
         <div class="product">
-            <img src="img/motorcycle1.jpg">
+            <img src="images/motorcycle1.jpg">
             <div class="product-cart">
                 <h5>Sale Price:</h5>
                 <p class="price">$155.00</p>

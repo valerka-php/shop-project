@@ -1,6 +1,6 @@
 <?php
 
-namespace framework\helpers;
+namespace App\Helpers;
 
 class Helper
 {

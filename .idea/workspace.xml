@@ -5,48 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edb98b44-0f88-4d7c-bf6c-67ad3b63b7da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/framework/core/Autoloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/helpers/Helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/nix-practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nix-practice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.php-cs-fixer.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php-cs-fixer.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/core/Autoloader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/helpers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/helpers/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/additional-info.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/additional-info.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/autoloader/autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bicycle8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bicycle8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/car.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/car.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/car1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/car1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/car2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/car2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/car3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/car3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/car4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/car4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/car5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/car5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/motorcycle7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/motorcycle7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/online-shop.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/online-shop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/order-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/order-img.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/shop-bck.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/shop-bck.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/shop-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/shop-img.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/shop.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/shop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inventory/product_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/inventory/product_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Render.php" beforeDir="false" afterPath="$PROJECT_DIR$/framework/core/Render.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -108,21 +90,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/var/www/nix-project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.php.quality.tools",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/var/www/nix-project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.php.quality.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -134,6 +116,16 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/include" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/public/index.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -164,6 +156,18 @@
       <workItem from="1656519079753" duration="76000" />
       <workItem from="1656528726612" duration="3127000" />
       <workItem from="1656572205510" duration="4195000" />
+      <workItem from="1656593692749" duration="6405000" />
+      <workItem from="1656600148375" duration="6634000" />
+      <workItem from="1656614786593" duration="452000" />
+      <workItem from="1656659331818" duration="2045000" />
+      <workItem from="1656673820177" duration="215000" />
+      <workItem from="1656684055666" duration="1036000" />
+      <workItem from="1656743903495" duration="138000" />
+      <workItem from="1656744175727" duration="2787000" />
+      <workItem from="1656748556318" duration="2709000" />
+      <workItem from="1656783280667" duration="2619000" />
+      <workItem from="1656792859754" duration="1202000" />
+      <workItem from="1656838078603" duration="1788000" />
     </task>
     <servers />
   </component>
