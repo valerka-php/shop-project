@@ -3,29 +3,13 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL) ;
 
-require_once '../framework/core/Autoloader.php';
-use framework\helpers\Helper;
 
+require_once '../vendor/autoload.php';
 
-Autoloader::register();
+use App\Core\Router;
+use App\Core\Render;
 
+$obj = new Render();
+$obj->test();
 
-$arr = [
-    '123','333','444','3423'
-];
-
-Helper::dd($arr);
-
-
-//
-//var_dump($_SERVER['REQUEST_URI']);
-//echo 'index.php';
-
-
-//
-//
-//
-//$obj = new Render();
-//$products = include_once './../src/inventory/product_list.php';
-//$params = ['productList' => $products];
-//$obj->getRender('default',$params,'product');
+Router::run($_SERVER['REQUEST_URI']);

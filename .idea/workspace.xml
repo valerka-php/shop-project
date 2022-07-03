@@ -10,7 +10,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -99,6 +99,16 @@
       <recent name="$PROJECT_DIR$/include" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/public/index.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -128,7 +138,22 @@
       <workItem from="1656519079753" duration="76000" />
       <workItem from="1656528726612" duration="3127000" />
       <workItem from="1656572205510" duration="4195000" />
+<<<<<<< HEAD
       <workItem from="1656841144957" duration="403000" />
+=======
+      <workItem from="1656593692749" duration="6405000" />
+      <workItem from="1656600148375" duration="6634000" />
+      <workItem from="1656614786593" duration="452000" />
+      <workItem from="1656659331818" duration="2045000" />
+      <workItem from="1656673820177" duration="215000" />
+      <workItem from="1656684055666" duration="1036000" />
+      <workItem from="1656743903495" duration="138000" />
+      <workItem from="1656744175727" duration="2787000" />
+      <workItem from="1656748556318" duration="2709000" />
+      <workItem from="1656783280667" duration="2619000" />
+      <workItem from="1656792859754" duration="1202000" />
+      <workItem from="1656838078603" duration="2824000" />
+>>>>>>> psr-fix
     </task>
     <servers />
   </component>

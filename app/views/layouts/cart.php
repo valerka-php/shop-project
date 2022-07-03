@@ -8,16 +8,16 @@
             </div>
             <div class="modal-order">
                 <ol>
-                    <li><img class="img-list" src="img/car4.jpg"> car <b>: 155 USD</b>
+                    <li><img class="img-list" src="images/car4.jpg"> car <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
-                    <li><img class="img-list" src="img/car3.jpg"> car <b>: 155 USD</b>
+                    <li><img class="img-list" src="images/car3.jpg"> car <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
-                    <li><img class="img-list" src="img/motorcycle1.jpg"> motorcycle <b>: 155 USD</b>
+                    <li><img class="img-list" src="images/motorcycle1.jpg"> motorcycle <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
-                    <li><img class="img-list" src="img/motorcycle3.jpg"> motorcycle <b>: 155 USD</b>
+                    <li><img class="img-list" src="images/motorcycle3.jpg"> motorcycle <b>: 155 USD</b>
                         <button class="btn-close"></button>
                     </li>
                 </ol>
