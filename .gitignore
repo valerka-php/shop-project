@@ -1,4 +1,3 @@
 /vendor/
-.gitignore
-.php-cs-fixer.cache
-.idea
+/.php-cs-fixer.cache
+/.idea
