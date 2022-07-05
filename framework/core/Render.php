@@ -4,7 +4,7 @@ namespace App\Core;
 
 class Render
 {
-    public function getRender(string $layout, array $params, string $view)
+    public function getRender(string $layout, array $params, string $view): bool|string
     {
         $layout = './../app/views/layouts/' . $layout . '.php';
         $view = './../app/views/' . $view . '.php';
