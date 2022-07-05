@@ -5,12 +5,9 @@ namespace App\Core;
 abstract class Controller
 {
     public string $layout = 'default' ;
-    public string $view ;
-    public array $params = [];
-
-    public function getView(string $layout, array $params, string $view): void
+    public function getView(string $view, string $layout, array $params = []): void
     {
         $render = new Render();
-        $render->getRender($this->layout, $params, $this->view);
+        $render->getRender($view, $this->layout, $params);
     }
 }

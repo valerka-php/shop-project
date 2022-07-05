@@ -25,16 +25,16 @@ class Router
     {
         $this->add($request);
         $controller = $this->route['controller'];
-        $action = $this->route['action'];
+        $view = $this->route['action'];
         $file = $_SERVER['DOCUMENT_ROOT'] . '/../app/controllers/' . ucfirst($controller) . 'Controller.php';
 
         if (file_exists($file)) {
             require_once $file;
             $class = 'App\Controller\\' . ucfirst($controller) . 'Controller';
-            $view = $action . 'Action';
             $obj = new $class();
-            if (method_exists($obj, $view)) {
-                $obj->$view();
+            $action = $view . 'Action';
+            if (method_exists($obj, $action)) {
+                $obj->$action($view);
             } else {
                 echo '404 EROR';
             }

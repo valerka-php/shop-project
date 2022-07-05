@@ -10,7 +10,7 @@ class Logger extends AbstractLogger
 
     public static function log($level, string|\Stringable $message, array $context = []): void
     {
-        $data = date('H:m:s ') . '/' . $level . '/' . $message ;
+        $data = date('H:m:s ') . '/' . $level . '/' . $message;
         file_put_contents(self::$path, $data, FILE_APPEND);
     }
 }

@@ -9,11 +9,9 @@ use App\Core\Logger;
 class HomeController extends Controller
 {
     public string $view = 'product';
-    public array $params = [];
-
     public function indexAction(): void
     {
-        $this->getView($this->layout, $this->params, $this->view);
+        $this->getView($this->view, $this->layout);
         echo 'Home controller index action';
         Logger::log(LogLevel::NOTICE, "open indexAction\r");
     }
