@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controller;
+namespace App\controller;
 
-use App\Core\Controller;
+use Framework\core\Controller;
 use Psr\Log\LogLevel;
-use App\Core\Logger;
+use Framework\core\Logger;
 
 class HomeController extends Controller
 {

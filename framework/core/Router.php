@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace Framework\core;
 
 class Router
 {
@@ -30,7 +30,7 @@ class Router
 
         if (file_exists($file)) {
             require_once $file;
-            $class = 'App\Controller\\' . ucfirst($controller) . 'Controller';
+            $class = 'App\controller\\' . ucfirst($controller) . 'Controller';
             $obj = new $class();
             $action = $view . 'Action';
             if (method_exists($obj, $action)) {
