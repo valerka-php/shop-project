@@ -1,6 +1,3 @@
-<div class="btn-home" style="background-color: grey;margin: auto;height: 45px;display: flex;align-items: center;justify-content: end" >
-    <a class="btn btn-outline-light bi bi-house" href="/"></a>
-</div>
 <div class="sing-in-form">
     <form action="" method="post">
         <div class="col-md">
@@ -16,7 +13,7 @@
             <button type="submit" class="btn btn-primary btn-login" name="click">Log In</button>
         </div>
         <div>
-            <a href=""> You haven`t account? </a>
+            <a href="/register"> You haven`t account? </a>
         </div>
     </form>
 </div>

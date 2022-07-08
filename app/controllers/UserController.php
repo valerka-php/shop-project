@@ -8,7 +8,7 @@ use Psr\Log\LogLevel;
 
 class UserController extends Controller
 {
-    public string $layout = 'base' ;
+    public string $layout = 'user' ;
 
     public function loginAction($view)
     {

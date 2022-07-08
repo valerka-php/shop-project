@@ -7,8 +7,6 @@ namespace Framework\core;
  */
 abstract class AbstractModel
 {
-    public object $pdo;
-
     public function __construct(){
         $this->pdo = Db::getInstance();
     }

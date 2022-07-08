@@ -4,6 +4,7 @@ namespace Framework\core;
 
 class Render
 {
+
     public function getRender(string $view, string $layout, array $params): bool|string
     {
         $layout = './../app/views/layouts/' . $layout . '.php';
@@ -13,10 +14,10 @@ class Render
             ob_start();
             include_once $layout;
             include_once $view;
-            $render = ob_end_flush();
+            $content = ob_end_flush();
         } else {
-            $render = '';
+            $content = '';
         }
-        return $render;
+        return $content;
     }
 }
