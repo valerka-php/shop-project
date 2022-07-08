@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Controller;
+namespace App\controllers;
 
-use App\Core\Controller;
-use App\Core\Logger;
+use Framework\core\Controller;
+use Framework\core\Logger;
 use Psr\Log\LogLevel;
 
 class UserController extends Controller
 {
     public string $layout = 'base' ;
-    public function loginAction($view, $params = [])
+
+    public function loginAction($view)
     {
-        $this->getView($view, $this->layout);
+        $this->getView($view);
         Logger::log(LogLevel::NOTICE, "open loginAction\r");
     }
 }

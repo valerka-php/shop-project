@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Controller;
+namespace App\controllers;
 
-use App\Core\Controller;
+use Framework\core\Controller;
 use Psr\Log\LogLevel;
-use App\Core\Logger;
+use Framework\core\Logger;
 
 class HomeController extends Controller
 {
-    public string $view = 'product';
+
     public function indexAction(): void
     {
-        $this->getView($this->view, $this->layout);
+        $this->getView('product');
         echo 'Home controller index action';
         Logger::log(LogLevel::NOTICE, "open indexAction\r");
     }
