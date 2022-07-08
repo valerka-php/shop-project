@@ -5,6 +5,6 @@ error_reporting(E_ALL) ;
 
 
 require_once '../vendor/autoload.php';
-use App\Core\Router;
+use Framework\core\Router;
 
 Router::run($_SERVER['REQUEST_URI']);

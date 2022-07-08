@@ -2,7 +2,8 @@
     "name": "valerjan/nix-practice",
     "autoload": {
         "psr-4": {
-            "Framework\\": "framework/"
+            "Framework\\": "framework/",
+            "App\\" : "app/"
         }
     },
     "require": {
