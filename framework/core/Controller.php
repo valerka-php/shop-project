@@ -9,6 +9,7 @@ abstract class Controller
     public function getView(string $view, array $params = []): void
     {
         $render = new Render();
-        $render->getRender($view, $this->layout , $params);
+        $data = $render->getRender($view, $this->layout , $params);
+        var_dump($data);
     }
 }

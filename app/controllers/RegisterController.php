@@ -9,7 +9,7 @@ class RegisterController extends Controller
     public string $layout = 'user';
 
     public function indexAction(){
-        $this->getView('register');
+        $this->getView('register',['title' => 'register']);
 //        var_dump($_POST);
     }
 }

@@ -12,7 +12,10 @@ class UserController extends Controller
 
     public function loginAction($view)
     {
-        $this->getView($view);
+
+        $this->getView($view,['title' => 'login']);
+        $test = 'test from user login';
+
         Logger::log(LogLevel::NOTICE, "open loginAction\r");
     }
 }

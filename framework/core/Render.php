@@ -4,12 +4,15 @@ namespace Framework\core;
 
 class Render
 {
-
     public function getRender(string $view, string $layout, array $params): bool|string
     {
         $layout = './../app/views/layouts/' . $layout . '.php';
         $view = './../app/views/' . $view . '.php';
-        extract($params);
+
+        if (!empty($params)){
+            extract($params);
+        }
+
         if (file_exists($layout)) {
             ob_start();
             include_once $layout;
@@ -18,6 +21,7 @@ class Render
         } else {
             $content = '';
         }
+
         return $content;
     }
 }
