@@ -7,12 +7,13 @@ namespace Framework\core;
  */
 abstract class AbstractModel
 {
+
     public function __construct(){
         $this->pdo = Db::getInstance();
     }
 
-    public function getData($query)
+    public function select($query)
     {
-        return $this->pdo->query($query);
+       return $this->pdo->query($query);
     }
 }

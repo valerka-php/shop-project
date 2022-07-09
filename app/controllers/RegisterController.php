@@ -2,14 +2,14 @@
 
 namespace App\controllers;
 
-use Framework\core\Controller;
+use Framework\helpers\Helper;
 
-class RegisterController extends Controller
+class RegisterController extends AppController
 {
     public string $layout = 'user';
 
-    public function indexAction(){
-        $this->getView('register',['title' => 'register']);
-//        var_dump($_POST);
+    public function indexAction()
+    {
+        $this->getView('index');
     }
 }

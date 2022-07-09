@@ -4,10 +4,10 @@ namespace Framework\core;
 
 class Render
 {
-    public function getRender(string $view, string $layout, array $params): bool|string
+    public static function run(string $view, string $layout, string $folderView , array $params) : bool
     {
         $layout = './../app/views/layouts/' . $layout . '.php';
-        $view = './../app/views/' . $view . '.php';
+        $view = './../app/views/' . ucfirst($folderView) . '/' . $view . '.php';
 
         if (!empty($params)){
             extract($params);
@@ -17,11 +17,7 @@ class Render
             ob_start();
             include_once $layout;
             include_once $view;
-            $content = ob_end_flush();
-        } else {
-            $content = '';
         }
-
-        return $content;
+        return ob_get_flush();
     }
 }

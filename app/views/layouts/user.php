@@ -17,4 +17,3 @@
     <a class="btn btn-outline-light bi bi-house" href="/"></a>
 </div>
 
-<?php echo $test ?>

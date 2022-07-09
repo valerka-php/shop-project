@@ -9,6 +9,7 @@ class Router
 
     private function add($request): void
     {
+
         $path = explode('/', htmlspecialchars(mb_substr($request, 1)));
         foreach ($path as $key => $value) {
             if (!empty($value) && $key === 0) {
@@ -26,15 +27,13 @@ class Router
         $this->add($request);
         $controller = $this->route['controller'];
         $view = $this->route['action'];
-        $file = $_SERVER['DOCUMENT_ROOT'] . '/../app/controllers/' . ucfirst($controller) . 'Controller.php';
+        $class = 'App\controllers\\' . ucfirst($controller) . 'Controller';
 
-        if (file_exists($file)) {
-            require_once $file;
-            $class = 'App\controllers\\' . ucfirst($controller) . 'Controller';
-            $obj = new $class();
+        if (class_exists($class)) {
             $action = $view . 'Action';
-            if (method_exists($obj, $action)) {
-                $obj->$action($view);
+            if (method_exists($class, $action)) {
+                $cObj = new $class($this->route['controller']);
+                $cObj->$action();
             } else {
                 echo '404 EROR';
             }

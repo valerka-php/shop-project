@@ -9,7 +9,7 @@ use Framework\helpers\Helper;
 use Psr\Log\LogLevel;
 use Framework\core\Logger;
 
-class HomeController extends Controller
+class HomeController extends AppController
 {
 
     public function indexAction(): void
@@ -18,8 +18,9 @@ class HomeController extends Controller
         echo 'Home controller index action';
         Logger::log(LogLevel::NOTICE, "open indexAction\r");
 
-        $obj = new Home();
-        $data = $obj->getData("SELECT * FROM books");
+        $con = new Home();
+        $data = $con->getOne();
+
         Helper::dd($data);
 
     }

@@ -5,11 +5,15 @@ namespace Framework\core;
 abstract class Controller
 {
     public string $layout = 'default' ;
+    public string $folderView = '';
+
+    public function __construct($route)
+    {
+        $this->folderView = $route;
+    }
 
     public function getView(string $view, array $params = []): void
     {
-        $render = new Render();
-        $data = $render->getRender($view, $this->layout , $params);
-        var_dump($data);
+        Render::run($view, $this->layout , $this->folderView , $params );
     }
 }

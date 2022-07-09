@@ -17,3 +17,11 @@
         </div>
     </form>
 </div>
+
+<div>
+    <?php
+        echo $test;
+        echo '<br>';
+        echo $test2;
+    ?>
+</div>
