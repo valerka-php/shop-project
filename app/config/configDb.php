@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dsn' => "mysql:host=localhost;dbname=lesson_db;charset=utf8",
+    'dsn' => "mysql:host=localhost;dbname=projectDb;charset=utf8",
     'user' => "nyzhnui",
     'pass' => "qwerty"
 ];

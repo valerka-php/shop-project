@@ -1,6 +1,7 @@
 <?php
 
 namespace Framework\core;
+use Framework\core\BaseModel;
 
 abstract class Controller
 {

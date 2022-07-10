@@ -2,9 +2,9 @@
 
 namespace App\models;
 
-use Framework\core\AbstractModel;
+use Framework\core\BaseModel;
 
-class Register extends AbstractModel
+class Register extends BaseModel
 {
 
 }

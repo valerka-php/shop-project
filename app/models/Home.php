@@ -2,14 +2,30 @@
 
 namespace App\models;
 
-use Framework\core\AbstractModel;
+use Framework\core\BaseModel;
 
 
-class Home extends AbstractModel
+class Home extends BaseModel
 {
-    public function getOne()
+    public function insertIntoTable($table, $values = [])
     {
-        $query = "SELECT * FROM books WHERE id=1";
-        return $this->select($query);
+        $column = '';
+        $data = '';
+        if (!empty($values)) {
+            foreach ($values as $key => $value) {
+                $column .= "`" . $key . "`, ";
+                $data .= '`' . $value . '`, ';
+            }
+        }
+
+        $preparedColumn = substr($column, 0, -2);
+        $preparedData = substr($data, 0, -2);
+
+        var_dump($preparedColumn);
+        var_dump($preparedData);
+
+
+        $response = "INSERT INTO `$table` ($preparedColumn) VALUES ($preparedData)";
+        return $this->pdo->query($response);
     }
 }
