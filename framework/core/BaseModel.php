@@ -2,6 +2,8 @@
 
 namespace Framework\core;
 
+use JetBrains\PhpStorm\ArrayShape;
+
 /**
  * @property object $pdo
  */
@@ -33,5 +35,25 @@ class BaseModel
         return $this->pdo->query($request);
     }
 
+
+    #[ArrayShape(['title' => "string", 'values' => "string"])]
+    public function prepareValues($array): array
+    {
+        $column = '';
+        $value = '';
+        if (!empty($array)) {
+            foreach ($array as $k => $v) {
+                $column .= "`" . $k . "`,";
+                $value .= "'" . $v . "',";
+            }
+        }
+        $preparedColumn = substr($column, 0, -1);
+        $preparedData = substr($value, 0, -1);
+
+        return [
+            'title' => $preparedColumn,
+            'values' => $preparedData
+        ];
+    }
 
 }

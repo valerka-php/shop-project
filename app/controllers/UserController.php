@@ -38,16 +38,13 @@ class UserController extends AppController
         $this->getView('registration', $params);
 
         if (isset($_POST) && !empty($_POST['login'])) {
-            $checked = Validator::checkData($_POST);
-//            $this->model->insertUserIntoTable($checked);
-            $user = $this->model->checkUser($_POST['login']);
+            $checked = Validator::validateData($_POST);
+            $user = $this->model->checkUser($checked);
             var_dump($user);
-
-
-        } else {
-            echo 'empty  post';
+            if ($user === true){
+                $this->model->insertUserIntoTable($checked);
+            }
         }
-
 
     }
 }

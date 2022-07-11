@@ -6,32 +6,36 @@ use Framework\core\BaseModel;
 
 class User extends BaseModel
 {
-    public function insertUserIntoTable($values = []): array
+    public function insertUserIntoTable($data): bool
     {
-        $column = '';
-        $data = '';
-        if (!empty($values)) {
-            foreach ($values as $key => $value) {
-                $column .= "`" . $key . "`,";
-                $data .= "'" . $value . "',";
-            }
-        }
-        $preparedColumn = substr($column, 0, -1);
-        $preparedData = substr($data, 0, -1);
+        $array = $this->prepareValues($data);
 
-        $request = "INSERT INTO users ($preparedColumn) VALUES ($preparedData)";
-        return $this->pdo->query($request);
+        $title = $array['title'];
+        $value = $array['values'];
+
+        $request = "INSERT INTO users ($title) VALUES ($value)";
+        $this->pdo->query($request);
+
+        return true;
     }
 
-    public function checkUser($user): bool
+    public function checkUser($userData): bool|string
     {
-        $request = "SELECT `login` FROM {$this->table} WHERE login='$user'";
+        $login = $userData['login'];
+        $email = $userData['email'];
+
+        $request = "SELECT * FROM {$this->table} WHERE login='$login' OR email='$email'";
         $response = $this->pdo->query($request);
 
         if (!empty($response)) {
-            return true;
-        } else {
-            return false;
+            $result = $response[0];
+            if ($login === $result['login']) {
+                return 'Login zaniat';
+            } elseif ($email === $result['email']) {
+                return 'email zaniat';
+            }
         }
+
+        return true;
     }
 }

@@ -4,7 +4,7 @@ namespace Framework\helpers;
 
 class Validator
 {
-    public static function checkData($data = [])
+    public static function validateData($data = [])
     {
         if (!empty($data)) {
             $result = [];
