@@ -35,7 +35,6 @@ class BaseModel
         return $this->pdo->query($request);
     }
 
-
     #[ArrayShape(['title' => "string", 'values' => "string"])]
     public function prepareValues($array): array
     {
@@ -48,11 +47,11 @@ class BaseModel
             }
         }
         $preparedColumn = substr($column, 0, -1);
-        $preparedData = substr($value, 0, -1);
+        $preparedValues = substr($value, 0, -1);
 
         return [
             'title' => $preparedColumn,
-            'values' => $preparedData
+            'values' => $preparedValues
         ];
     }
 

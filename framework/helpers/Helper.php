@@ -11,4 +11,19 @@ class Helper
         echo '</pre>';
         exit;
     }
+
+    public static function filterDataInArray($array, $params = [])
+    {
+        $count = 0;
+        $result = [];
+
+        foreach ($array as $item => $value) {
+            if ($count < count($params) && $item === $params[$count]) {
+                $result[$item] = $value;
+                $count++;
+            }
+        }
+
+        return $result;
+    }
 }

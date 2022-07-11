@@ -14,4 +14,9 @@ class Validator
             return $result;
         }
     }
+
+    public function validatePassword()
+    {
+
+    }
 }

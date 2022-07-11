@@ -33,18 +33,26 @@ class UserController extends AppController
     public function registrationAction()
     {
         $params = [
-            'title' => 'login'
+            'title' => 'registration'
         ];
         $this->getView('registration', $params);
 
-        if (isset($_POST) && !empty($_POST['login'])) {
-            $checked = Validator::validateData($_POST);
-            $user = $this->model->checkUser($checked);
-            var_dump($user);
-            if ($user === true){
-                $this->model->insertUserIntoTable($checked);
-            }
-        }
+//        if (isset($_POST) && !empty($_POST['login'])) {
+//            $checked = Validator::validateData($_POST);
+//            $user = $this->model->checkUser($checked);
+//            var_dump($user);
+//            if ($user === true){
+//                $this->model->insertUserIntoTable($checked);
+//            }
+//        }
+
+        $checked = Validator::validateData($_POST);
+
+        $arr = Helper::filterDataInArray($checked,['login','email','password']);
+
+//        Helper::dd($checked);
+        Helper::dd($arr);
+        die();
 
     }
 }

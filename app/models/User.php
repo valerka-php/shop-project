@@ -9,10 +9,8 @@ class User extends BaseModel
     public function insertUserIntoTable($data): bool
     {
         $array = $this->prepareValues($data);
-
         $title = $array['title'];
         $value = $array['values'];
-
         $request = "INSERT INTO users ($title) VALUES ($value)";
         $this->pdo->query($request);
 
@@ -23,10 +21,8 @@ class User extends BaseModel
     {
         $login = $userData['login'];
         $email = $userData['email'];
-
         $request = "SELECT * FROM {$this->table} WHERE login='$login' OR email='$email'";
         $response = $this->pdo->query($request);
-
         if (!empty($response)) {
             $result = $response[0];
             if ($login === $result['login']) {
@@ -35,7 +31,6 @@ class User extends BaseModel
                 return 'email zaniat';
             }
         }
-
         return true;
     }
 }
