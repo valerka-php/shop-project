@@ -1,5 +1,5 @@
 <div class="tab-content" id="pills-tabContent ">
-    <?php $productList = require '../src/inventory/product_list.php'?>
+    <?php $productList = require '../src/inventory/product_list.php' ?>
     <?php foreach ($productList as $category => $list) : ?>
         <div class="tab-pane fade " id="<?= 'pills-' . $category ?>" role="tabpanel"
              aria-labelledby="<?= 'pills-' . $category . '-tab' ?>">

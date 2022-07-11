@@ -17,22 +17,21 @@ class BaseModel
 
     public function getOneById($id)
     {
-        $response = "SELECT * FROM {$this->table} WHERE id={$id}";
-        return $this->pdo->query($response);
+        $request = "SELECT * FROM {$this->table} WHERE id={$id}";
+        return $this->pdo->query($request);
     }
 
     public function getAll()
     {
-        $response = "SELECT * FROM {$this->table}";
-        return $this->pdo->query($response);
+        $request = "SELECT * FROM {$this->table}";
+        return $this->pdo->query($request);
     }
 
     public function getValueByColumn($value, $column)
     {
-        $response = "SELECT {$this->table}.{$column} FROM {$this->table} WHERE {$column}='{$value}'";
-        return $this->pdo->query($response);
+        $request = "SELECT {$this->table}.{$column} FROM {$this->table} WHERE {$column}='{$value}'";
+        return $this->pdo->query($request);
     }
-
 
 
 }

@@ -16,7 +16,7 @@ class Db
             \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
         ];
 
-        $this->pdo = new \PDO($db['dsn'] , $db['user'], $db['pass'], $options);
+        $this->pdo = new \PDO($db['dsn'], $db['user'], $db['pass'], $options);
 
     }
 

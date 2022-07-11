@@ -21,18 +21,6 @@ class HomeController extends AppController
     {
         $this->getView('product');
 //        Logger::log(LogLevel::NOTICE, "open indexAction\r");
-
-//        $data = $this->model->getValueByColumn('lotr','title');
-
-        $arr = [
-            'login' => 'qwert',
-            'email' => 'test',
-            'password' => 'parerrd'
-        ];
-
-        $this->model->insertIntoTable('users',$arr);
-//        Helper::dd($data);
-
     }
 
     public function testAction(): void

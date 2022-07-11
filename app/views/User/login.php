@@ -13,7 +13,7 @@
             <button type="submit" class="btn btn-primary btn-login" name="click">Log In</button>
         </div>
         <div>
-            <a href="/register"> You haven`t account? </a>
+            <a href="registration"> You haven`t account? </a>
         </div>
     </form>
 </div>
