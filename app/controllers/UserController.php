@@ -5,6 +5,7 @@ namespace App\controllers;
 use App\models\User;
 use Framework\core\Logger;
 use Framework\helpers\Helper;
+use Framework\helpers\Session;
 use Framework\helpers\Validator;
 use Psr\Log\LogLevel;
 
@@ -13,7 +14,7 @@ class UserController extends AppController
     public string $layout = 'user';
     private User $model;
 
-    public function __construct($route)
+    public function __construct(string $route)
     {
         parent::__construct($route);
         $this->model = new User('users');
@@ -37,22 +38,18 @@ class UserController extends AppController
         ];
         $this->getView('registration', $params);
 
-//        if (isset($_POST) && !empty($_POST['login'])) {
-//            $checked = Validator::validateData($_POST);
-//            $user = $this->model->checkUser($checked);
-//            var_dump($user);
-//            if ($user === true){
-//                $this->model->insertUserIntoTable($checked);
-//            }
-//        }
+        if (!empty($_POST)){
+            $validate = Validator::validateData($_POST);
+            $arr = Helper::filterArray($validate, ['login', 'email','password']);
+            $user = $this->model->checkUser($arr);
+            if ($user === true){
+                $this->model->insertUserIntoTable($arr);
+                Session::setSession('message','User has been created');
+                header('location: /user/login');
+            }
+        }
 
-        $checked = Validator::validateData($_POST);
 
-        $arr = Helper::filterDataInArray($checked,['login','email','password']);
-
-//        Helper::dd($checked);
-        Helper::dd($arr);
-        die();
 
     }
 }

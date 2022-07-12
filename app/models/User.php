@@ -3,10 +3,11 @@
 namespace App\models;
 
 use Framework\core\BaseModel;
+use Framework\helpers\Session;
 
 class User extends BaseModel
 {
-    public function insertUserIntoTable($data): bool
+    public function insertUserIntoTable(array $data): bool
     {
         $array = $this->prepareValues($data);
         $title = $array['title'];
@@ -17,7 +18,7 @@ class User extends BaseModel
         return true;
     }
 
-    public function checkUser($userData): bool|string
+    public function checkUser(array $userData): bool|string
     {
         $login = $userData['login'];
         $email = $userData['email'];
@@ -26,9 +27,9 @@ class User extends BaseModel
         if (!empty($response)) {
             $result = $response[0];
             if ($login === $result['login']) {
-                return 'Login zaniat';
+               return Session::setSession('message','This login already exist');
             } elseif ($email === $result['email']) {
-                return 'email zaniat';
+               return Session::setSession('message','This email already exist');
             }
         }
         return true;

@@ -11,32 +11,32 @@ class BaseModel
 {
     public string $table;
 
-    public function __construct($table = '')
+    public function __construct(string $table = '')
     {
         $this->pdo = Db::getInstance();
         $this->table = $table;
     }
 
-    public function getOneById($id)
+    public function getOneById(int $id): array
     {
         $request = "SELECT * FROM {$this->table} WHERE id={$id}";
         return $this->pdo->query($request);
     }
 
-    public function getAll()
+    public function getAll(): array
     {
         $request = "SELECT * FROM {$this->table}";
         return $this->pdo->query($request);
     }
 
-    public function getValueByColumn($value, $column)
+    public function getValueByColumn(string $value,string $column): array
     {
         $request = "SELECT {$this->table}.{$column} FROM {$this->table} WHERE {$column}='{$value}'";
         return $this->pdo->query($request);
     }
 
     #[ArrayShape(['title' => "string", 'values' => "string"])]
-    public function prepareValues($array): array
+    public function prepareValues(array $array): array
     {
         $column = '';
         $value = '';

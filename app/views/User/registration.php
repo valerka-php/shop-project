@@ -1,3 +1,9 @@
+<?php
+
+use Framework\helpers\Session;
+
+?>
+
 <div class="sing-in-form">
     <form action="" method="post">
         <div class="mb-3">
@@ -30,4 +36,9 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <div>
+        <p>
+            <?php Session::showMessage(); ?>
+        </p>
+    </div>
 </div>

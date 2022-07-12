@@ -4,7 +4,7 @@ namespace Framework\helpers;
 
 class Helper
 {
-    public static function dd($arr)
+    public static function dd(array $arr)
     {
         echo '<pre>';
         var_dump($arr);
@@ -12,18 +12,16 @@ class Helper
         exit;
     }
 
-    public static function filterDataInArray($array, $params = [])
+    public static function filterArray(array $array, array $params = []): array
     {
-        $count = 0;
         $result = [];
-
-        foreach ($array as $item => $value) {
-            if ($count < count($params) && $item === $params[$count]) {
-                $result[$item] = $value;
-                $count++;
+        foreach ($params as $key) {
+            foreach ($array as $k => $v) {
+                if ($key === $k) {
+                    $result[$k] = $v;
+                }
             }
         }
-
         return $result;
     }
 }

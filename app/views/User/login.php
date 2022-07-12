@@ -1,3 +1,6 @@
+<?php use Framework\helpers\Session; ?>
+
+
 <div class="sing-in-form">
     <form action="" method="post">
         <div class="col-md">
@@ -15,13 +18,10 @@
         <div>
             <a href="registration"> You haven`t account? </a>
         </div>
+
+        <div>
+            <?php Session::showMessage(); ?>
+        </div>
     </form>
 </div>
 
-<div>
-    <?php
-        echo $test;
-        echo '<br>';
-        echo $test2;
-    ?>
-</div>
