@@ -38,7 +38,8 @@ use Framework\helpers\Session;
     </form>
     <div>
         <p>
-            <?php Session::showMessage(); ?>
+            <?php Session::showMessage();
+            ?>
         </p>
     </div>
 </div>

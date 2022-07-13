@@ -35,31 +35,41 @@ class BaseModel
 
     public function getOneById(int $id): array
     {
-        $request = "SELECT * FROM {$this->table} WHERE id={$id}";
+        $request = "SELECT * FROM $this->table WHERE id=$id";
         return $this->con->query($request);
     }
 
     public function getAll($table)
     {
-        $sql = "SELECT * FROM {$table}";
-        return $this->con->query($sql);
+        $sql = "SELECT * FROM $table";
+        return $this->con->select($sql);
     }
 
+//    public function insertIntoTable($table)
+//    {
+//        $request = "INSERT INTO $table (`type`) VALUES ('rr')";
+//        return $this->con->insert($request);
+//    }
 
-    public function getValueByColumn(string $value, string $column): array
-    {
-        $request = "SELECT {$this->table}.{$column} FROM {$this->table} WHERE {$column}='{$value}'";
-        return $this->con->query($request);
-    }
-
-    public function insert(array $data, string $table): void
+    public function insertIntoTable(array $data, string $table): void
     {
         $array = $this->prepareValues($data);
         $column = $array['title'];
         $value = $array['values'];
         $request = "INSERT INTO $table ($column) VALUES ($value)";
-        $this->con->query($request);
-
+        $this->con->insert($request);
     }
+
+
+    public function getValueByColumn(string $value, string $column): array
+    {
+        $request = "SELECT $this->table.$column FROM $this->table WHERE $column='$value'";
+        return $this->con->query($request);
+    }
+
+
+
+
+
 
 }

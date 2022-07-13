@@ -40,16 +40,18 @@ class UserController extends AppController
 
 
 
-//        if (!empty($_POST)) {
-//            $validate = Validator::validateData($_POST);
-//            $arr = Helper::filterArray($validate, ['login', 'email', 'password']);
-//            $user = $this->model->checkUser($arr,'users');
-//            if ($user === true) {
-//                $this->model->insert();
-//                Session::setSession('message', 'User has been created');
-//                header('location: /user/login');
-//            }
-//        }
+        if (!empty($_POST)) {
+            $validate = Validator::validateData($_POST);
+            $arr = Helper::filterArray($validate, ['login', 'email', 'password']);
+            $user = $this->model->checkUser($arr,'users');
+            if ($user === true) {
+                $this->model->insertIntoTable($arr,'users');
+                Session::setSession('message', 'User has been created');
+                header('location: /user/login');
+            }else{
+                header('location: /user/registration');
+            }
+        }
 
 
     }

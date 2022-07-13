@@ -21,8 +21,6 @@ class HomeController extends AppController
     {
         $this->getView('product');
 
-        $all = $this->model->getAll('users');
-        var_dump($all);
 //        Helper::dd($all);
 //        Logger::log(LogLevel::NOTICE, "open indexAction\r");
     }

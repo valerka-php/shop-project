@@ -3,15 +3,12 @@
 namespace Framework\core;
 
 
-use JetBrains\PhpStorm\ArrayShape;
-
-
 class Db
 {
-    public \PDO $pdo;
+    protected \PDO $pdo;
     protected static object $instance;
 
-    private function __construct()
+    protected function __construct()
     {
         $db = require_once '../app/config/configDb.php';
         $options = [
@@ -23,12 +20,6 @@ class Db
 
     }
 
-    private function __clone()
-    {
-
-    }
-
-
     public static function getInstance(): object
     {
         if (empty(self::$instance)) {
@@ -37,37 +28,32 @@ class Db
         return self::$instance;
     }
 
-    public function insert(array $data, string $table): void
-    {
-        $array = $this->prepareValues($data);
-        $column = $array['title'];
-        $value = $array['values'];
-        $request = "INSERT INTO $table ($column) VALUES ($value)";
-        $this->pdo->query($request);
-
-    }
-
-    public function send($requestSql): array
-    {
-        $prepare = $this->pdo->prepare($requestSql);
-        $result = $prepare->execute();
-        if ($result !== false) {
-            return $prepare->fetchAll();
-        }
-        return [];
-    }
-
-    public function query($request)
+    /** @noinspection PhpInconsistentReturnPointsInspection */
+    public function select($request): bool|array
     {
         $prepare = $this->pdo->prepare($request);
-        $result = $prepare->execute();
-        var_dump($result);
-
-
-        if ($result !== false) {
-            return $prepare->fetchAll();
+        try {
+            if ($prepare->execute()) {
+                return $prepare->fetchAll();
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
         }
+    }
 
+    /** @noinspection PhpInconsistentReturnPointsInspection */
+    public function insert($request): bool
+    {
+        $prepare = $this->pdo->prepare($request);
+        try {
+            if ($prepare->execute()) {
+                return true;
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
+        }
     }
 
 }

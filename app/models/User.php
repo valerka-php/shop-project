@@ -11,9 +11,9 @@ class User extends BaseModel
     {
         $login = $userData['login'];
         $email = $userData['email'];
-        $request = "SELECT * FROM {$table} WHERE login='$login' OR email='$email'";
-        $response = $this->con->query($request);
-        if (!empty($response)) {
+        $request = "SELECT * FROM $table WHERE login='$login' OR email='$email'";
+        $response = $this->con->select($request);
+        if ($response) {
             $result = $response[0];
             if ($login === $result['login']) {
                return Session::setSession('message','This login already exist');

@@ -14,7 +14,7 @@ class Session
         if (isset($_SESSION["message"])) {
             echo $_SESSION["message"];
         }
-        self::unset('message');
+       self::unset('message');
     }
 
     private static function unset(string $value): void
