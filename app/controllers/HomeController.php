@@ -20,6 +20,10 @@ class HomeController extends AppController
     public function indexAction(): void
     {
         $this->getView('product');
+
+        $all = $this->model->getAll('users');
+        var_dump($all);
+//        Helper::dd($all);
 //        Logger::log(LogLevel::NOTICE, "open indexAction\r");
     }
 

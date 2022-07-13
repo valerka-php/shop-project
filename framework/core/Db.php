@@ -3,12 +3,15 @@
 namespace Framework\core;
 
 
+use JetBrains\PhpStorm\ArrayShape;
+
+
 class Db
 {
-    protected \PDO $pdo;
+    public \PDO $pdo;
     protected static object $instance;
 
-    protected function __construct()
+    private function __construct()
     {
         $db = require_once '../app/config/configDb.php';
         $options = [
@@ -20,6 +23,12 @@ class Db
 
     }
 
+    private function __clone()
+    {
+
+    }
+
+
     public static function getInstance(): object
     {
         if (empty(self::$instance)) {
@@ -28,7 +37,17 @@ class Db
         return self::$instance;
     }
 
-    public function query($requestSql): array
+    public function insert(array $data, string $table): void
+    {
+        $array = $this->prepareValues($data);
+        $column = $array['title'];
+        $value = $array['values'];
+        $request = "INSERT INTO $table ($column) VALUES ($value)";
+        $this->pdo->query($request);
+
+    }
+
+    public function send($requestSql): array
     {
         $prepare = $this->pdo->prepare($requestSql);
         $result = $prepare->execute();
@@ -37,4 +56,18 @@ class Db
         }
         return [];
     }
+
+    public function query($request)
+    {
+        $prepare = $this->pdo->prepare($request);
+        $result = $prepare->execute();
+        var_dump($result);
+
+
+        if ($result !== false) {
+            return $prepare->fetchAll();
+        }
+
+    }
+
 }
