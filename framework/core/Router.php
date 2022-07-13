@@ -42,7 +42,6 @@ class Router
         }
     }
 
-
     public static function run($request): void
     {
         $obj = new self();

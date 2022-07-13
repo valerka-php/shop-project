@@ -17,7 +17,7 @@ class UserController extends AppController
     public function __construct(string $route)
     {
         parent::__construct($route);
-        $this->model = new User('users');
+        $this->model = new User();
     }
 
     public function loginAction()
@@ -38,17 +38,20 @@ class UserController extends AppController
         ];
         $this->getView('registration', $params);
 
-        if (!empty($_POST)){
+
+
+        if (!empty($_POST)) {
             $validate = Validator::validateData($_POST);
-            $arr = Helper::filterArray($validate, ['login', 'email','password']);
-            $user = $this->model->checkUser($arr);
-            if ($user === true){
-                $this->model->insertUserIntoTable($arr);
-                Session::setSession('message','User has been created');
+            $arr = Helper::filterArray($validate, ['login', 'email', 'password']);
+            $user = $this->model->checkUser($arr,'users');
+            if ($user === true) {
+                $this->model->insertIntoTable($arr,'users');
+                Session::setSession('message', 'User has been created');
                 header('location: /user/login');
+            }else{
+                header('location: /user/registration');
             }
         }
-
 
 
     }

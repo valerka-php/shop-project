@@ -28,13 +28,32 @@ class Db
         return self::$instance;
     }
 
-    public function query($requestSql): array
+    /** @noinspection PhpInconsistentReturnPointsInspection */
+    public function select($request): bool|array
     {
-        $prepare = $this->pdo->prepare($requestSql);
-        if ($prepare->execute()) {
-            return $prepare->fetchAll();
-        }else{
-           return $prepare->errorInfo();
+        $prepare = $this->pdo->prepare($request);
+        try {
+            if ($prepare->execute()) {
+                return $prepare->fetchAll();
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
         }
     }
+
+    /** @noinspection PhpInconsistentReturnPointsInspection */
+    public function insert($request): bool
+    {
+        $prepare = $this->pdo->prepare($request);
+        try {
+            if ($prepare->execute()) {
+                return true;
+            }
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
+
 }
