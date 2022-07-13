@@ -31,10 +31,10 @@ class Db
     public function query($requestSql): array
     {
         $prepare = $this->pdo->prepare($requestSql);
-        $result = $prepare->execute();
-        if ($result !== false) {
+        if ($prepare->execute()) {
             return $prepare->fetchAll();
+        }else{
+           return $prepare->errorInfo();
         }
-        return [];
     }
 }

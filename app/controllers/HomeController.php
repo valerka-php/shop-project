@@ -26,6 +26,6 @@ class HomeController extends AppController
     public function testAction(): void
     {
         echo 'Home controller test action';
-        Logger::log(LogLevel::NOTICE, "open testAction\r");
+//        Logger::log(LogLevel::NOTICE, "open testAction\r");
     }
 }
