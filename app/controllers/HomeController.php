@@ -6,6 +6,9 @@ use App\models\Home;
 use Framework\helpers\Helper;
 use Psr\Log\LogLevel;
 use Framework\core\Logger;
+use Swift_Mailer;
+use Swift_Message;
+use Swift_SmtpTransport;
 
 class HomeController extends AppController
 {
@@ -20,6 +23,8 @@ class HomeController extends AppController
     public function indexAction(): void
     {
         $this->getView('product');
+
+
 
 //        Helper::dd($all);
 //        Logger::log(LogLevel::NOTICE, "open indexAction\r");

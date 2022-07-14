@@ -6,11 +6,12 @@ use JetBrains\PhpStorm\ArrayShape;
 
 class BaseModel
 {
-    public object $con;
+    public object $connect;
 
     public function __construct()
     {
-        $this->con = Db::getInstance();
+        $db = new Db();
+        $this->connect = $db->getInstance();
     }
 
     #[ArrayShape(['title' => "string", 'values' => "string"])]
@@ -36,13 +37,13 @@ class BaseModel
     public function getOneById(int $id): array
     {
         $request = "SELECT * FROM $this->table WHERE id=$id";
-        return $this->con->query($request);
+        return $this->connect->query($request);
     }
 
-    public function getAll($table)
+    public function getAll($table): bool|array
     {
         $sql = "SELECT * FROM $table";
-        return $this->con->select($sql);
+        return $this->connect->select($sql);
     }
 
 //    public function insertIntoTable($table)
@@ -51,20 +52,20 @@ class BaseModel
 //        return $this->con->insert($request);
 //    }
 
-    public function insertIntoTable(array $data, string $table): void
+    public function insertIntoTable(array $data, string $table): bool
     {
-        $array = $this->prepareValues($data);
-        $column = $array['title'];
-        $value = $array['values'];
+        $preparedArray = $this->prepareValues($data);
+        $column = $preparedArray ['title'];
+        $value = $preparedArray ['values'];
         $request = "INSERT INTO $table ($column) VALUES ($value)";
-        $this->con->insert($request);
+        return $this->connect->insert($request);
     }
 
 
     public function getValueByColumn(string $value, string $column): array
     {
         $request = "SELECT $this->table.$column FROM $this->table WHERE $column='$value'";
-        return $this->con->query($request);
+        return $this->connect->query($request);
     }
 
 

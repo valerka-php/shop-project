@@ -6,26 +6,37 @@ namespace Framework\core;
 class Db
 {
     protected \PDO $pdo;
-    protected static object $instance;
+    public object $instance;
+    public string $dsn,$user,$pass;
 
-    protected function __construct()
+    public function __construct()
     {
-        $db = require_once '../app/config/configDb.php';
         $options = [
             \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
             \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
         ];
 
-        $this->pdo = new \PDO($db['dsn'], $db['user'], $db['pass'], $options);
+        $this->setConfig();
+        $this->pdo = new \PDO("$this->dsn", "$this->user", "$this->pass", $options);
 
     }
 
-    public static function getInstance(): object
+    public function setConfig(): void
     {
-        if (empty(self::$instance)) {
-            self::$instance = new self();
+        $config = require '../app/config/configDb.php';
+
+        $this->dsn = $config['dsn'];
+        $this->user = $config['user'];
+        $this->pass = $config['pass'];
+
+    }
+
+    public function getInstance(): object
+    {
+        if (empty($this->instance)) {
+            $this->instance = new self();
         }
-        return self::$instance;
+        return $this->instance;
     }
 
     /** @noinspection PhpInconsistentReturnPointsInspection */
