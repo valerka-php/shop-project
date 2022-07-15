@@ -53,7 +53,6 @@ class Db
             $msg = $e->getMessage();
             $line = $e->getLine();
             $file = $e->getFile();
-//            Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
             Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
             return false;
         }
@@ -70,7 +69,8 @@ class Db
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             $line = $e->getLine();
-            Logger::log(LogLevel::ERROR,"$msg","$line",'databaseLog.txt');
+            $file = $e->getFile();
+            Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
             return false;
         }
     }

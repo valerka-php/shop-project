@@ -1,1 +1,8 @@
 22:07:23 /notice/open loginAction22:07:24 /notice/open loginAction22:07:41 /notice/open loginAction13:07:08  | error | databaseLog.txt | line : 67 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+17:07:57  | error | databaseLog.txt | line : 67 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+18:07:13  | error | databaseLog.txt | line : 67 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+18:07:22  | error | databaseLog.txt | line : 67 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+18:07:07  | error | databaseLog.txt | line : 67 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+18:07:42  | error | databaseLog.txt | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+18:07:26  | error | databaseLog.txt | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+18:07:40  | error | databaseLog.txt | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value

@@ -2,10 +2,10 @@
 
 namespace App\models;
 
-use Framework\core\AbstractModel;
+use Framework\core\BaseModel;
 
 
-class Home extends AbstractModel
+class Home extends BaseModel
 {
 
 }

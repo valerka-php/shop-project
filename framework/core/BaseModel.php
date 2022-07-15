@@ -3,8 +3,9 @@
 namespace Framework\core;
 
 use JetBrains\PhpStorm\ArrayShape;
+use Framework\core\Db;
 
-abstract class AbstractModel
+class BaseModel
 {
     public object $connect;
 
@@ -13,8 +14,6 @@ abstract class AbstractModel
         $db = new Db();
         $this->connect = $db->getInstance();
     }
-
-
     /**
      * @param array $array Data which you need insert into the table
      * @return array Returns array strings prepared to sql request  (array[title] = title column , array[values] = value row)
@@ -63,7 +62,6 @@ abstract class AbstractModel
         $request = "INSERT INTO $table ($column) VALUES ($value)";
         return $this->connect->send($request);
     }
-
 
     public function getValueByColumn(string $value, string $column): array
     {

@@ -3,11 +3,9 @@
 namespace App\controllers;
 
 use App\models\User;
-use Framework\core\Logger;
 use Framework\helpers\Helper;
 use Framework\helpers\Session;
 use Framework\helpers\Validator;
-use Psr\Log\LogLevel;
 
 class UserController extends AppController
 {
@@ -37,13 +35,12 @@ class UserController extends AppController
             'title' => 'registration'
         ];
         $this->getView('registration', $params);
-
         if (isset($_POST['submit'])) {
-            $validatedData = Validator::validateData($_POST);
+            $validatedData = Validator::validate($_POST, 'array');
             $arr = Helper::filterArray($validatedData, ['login', 'email', 'password']);
             $newUser = $this->model->checkUser($arr, 'users');
-
             if ($newUser === true) {
+                $arr['vkey'] = $this->model->verifyKey;
                 $this->model->insertIntoTable($arr, 'users');
                 Session::set('message', 'User has been created');
                 header('location: /user/login');

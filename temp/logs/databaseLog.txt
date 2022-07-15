@@ -2,3 +2,35 @@
 04:07:16  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
 12:07:39  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
 12:07:28  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+17:07:01  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+17:07:17  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+17:07:44  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+18:07:25  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+18:07:25  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+18:07:26  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+18:07:22  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+18:07:22  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+18:07:59  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userr' doesn't exist
+18:07:09  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.user' doesn't exist
+18:07:14  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.user' doesn't exist
+18:07:15  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.user' doesn't exist
+18:07:15  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.user' doesn't exist
+18:07:15  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.user' doesn't exist
+18:07:18  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.user' doesn't exist
+18:07:46  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userss' doesn't exist
+18:07:44  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userss' doesn't exist
+18:07:46  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userss' doesn't exist
+18:07:46  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userss' doesn't exist
+18:07:47  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userss' doesn't exist
+18:07:47  | error | /var/www/nix-project/framework/core/Db.php | line : 49 | SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectDb.userss' doesn't exist
+18:07:51  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+18:07:10  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'created' doesn't have a default value
+18:07:58  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+18:07:53  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+18:07:36  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'created' doesn't have a default value
+20:07:15  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'users.PRIMARY'
+20:07:34  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'users.PRIMARY'
+20:07:26  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+20:07:08  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+20:07:36  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'nyshnui@gmail.com' for key 'users.email_UNIQUE'
+21:07:15  | error | /var/www/nix-project/framework/core/Db.php | line : 66 | SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'nyshnui@gmail.com' for key 'users.email_UNIQUE'
