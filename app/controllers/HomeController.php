@@ -3,9 +3,8 @@
 namespace App\controllers;
 
 use App\models\Home;
+use Valerjan\Logger;
 use Framework\helpers\Helper;
-use Psr\Log\LogLevel;
-use Framework\core\Logger;
 use Swift_Mailer;
 use Swift_Message;
 use Swift_SmtpTransport;
@@ -24,6 +23,7 @@ class HomeController extends AppController
     {
         $this->getView('product');
 
+        $this->model->getAll('userr');
 
 
 //        Helper::dd($all);

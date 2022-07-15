@@ -2,7 +2,6 @@
 
 namespace Framework\core;
 
-use Framework\core\BaseModel;
 
 abstract class Controller
 {
@@ -14,8 +13,8 @@ abstract class Controller
         $this->folderView = $route;
     }
 
-    public function getView(string $view, array $params = []): void
+    public function getView(string $view, array $params = []): bool
     {
-        Render::run($view, $this->layout, $this->folderView, $params);
+       return Render::run($view, $this->layout, $this->folderView, $params);
     }
 }

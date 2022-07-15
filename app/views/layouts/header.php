@@ -4,7 +4,7 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <ul class="nav nav-pills mb-3 list" id="pills-tab" role="tablist">
-            <?php $productArr = include_once '../src/inventory/product_list.php'; ?>
+            <?php $productArr = include_once '../temp/inventory/product_list.php'; ?>
             <?php foreach ($productArr as $category => $list) : ?>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="<?= $category . '-tab' ?>" data-bs-toggle="pill"

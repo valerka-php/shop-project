@@ -2,6 +2,8 @@
 
 namespace Framework\core;
 
+use Valerjan\Logger;
+use Valerjan\log\LogLevel;
 
 class Db
 {
@@ -40,7 +42,7 @@ class Db
     }
 
     /** @noinspection PhpInconsistentReturnPointsInspection */
-    public function select($request): bool|array
+    public function get($request): bool|array
     {
         $prepare = $this->pdo->prepare($request);
         try {
@@ -48,13 +50,17 @@ class Db
                 return $prepare->fetchAll();
             }
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            $msg = $e->getMessage();
+            $line = $e->getLine();
+            $file = $e->getFile();
+//            Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
+            Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
             return false;
         }
     }
 
     /** @noinspection PhpInconsistentReturnPointsInspection */
-    public function insert($request): bool
+    public function send($request): bool
     {
         $prepare = $this->pdo->prepare($request);
         try {
@@ -62,7 +68,9 @@ class Db
                 return true;
             }
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            $msg = $e->getMessage();
+            $line = $e->getLine();
+            Logger::log(LogLevel::ERROR,"$msg","$line",'databaseLog.txt');
             return false;
         }
     }

@@ -28,7 +28,7 @@ class UserController extends AppController
             'title' => 'login'
         ];
         $this->getView('login', $params);
-        Logger::log(LogLevel::NOTICE, "open loginAction\r");
+//        Logger::log(LogLevel::NOTICE, "open loginAction\r");
     }
 
     public function registrationAction()

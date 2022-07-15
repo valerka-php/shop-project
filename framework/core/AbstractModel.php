@@ -4,7 +4,7 @@ namespace Framework\core;
 
 use JetBrains\PhpStorm\ArrayShape;
 
-class BaseModel
+abstract class AbstractModel
 {
     public object $connect;
 
@@ -37,20 +37,14 @@ class BaseModel
     public function getOneById(int $id): array
     {
         $request = "SELECT * FROM $this->table WHERE id=$id";
-        return $this->connect->query($request);
+        return $this->connect->get($request);
     }
 
     public function getAll($table): bool|array
     {
         $sql = "SELECT * FROM $table";
-        return $this->connect->select($sql);
+        return $this->connect->get($sql);
     }
-
-//    public function insertIntoTable($table)
-//    {
-//        $request = "INSERT INTO $table (`type`) VALUES ('rr')";
-//        return $this->con->insert($request);
-//    }
 
     public function insertIntoTable(array $data, string $table): bool
     {
@@ -58,7 +52,7 @@ class BaseModel
         $column = $preparedArray ['title'];
         $value = $preparedArray ['values'];
         $request = "INSERT INTO $table ($column) VALUES ($value)";
-        return $this->connect->insert($request);
+        return $this->connect->send($request);
     }
 
 

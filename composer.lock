@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b605c273b251f3250dca47266b65ad1",
+    "content-hash": "24b5eb2cdb37bcf9a773d53d654cb243",
     "packages": [
         {
             "name": "composer/pcre",
@@ -2465,12 +2465,51 @@
                 }
             ],
             "time": "2022-06-26T16:35:04+00:00"
+        },
+        {
+            "name": "valerjan/logger",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/valerka-php/package.git",
+                "reference": "f8e1bf2ae6bc2231a70f7155fe6fd43b02b29229"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/valerka-php/package/zipball/f8e1bf2ae6bc2231a70f7155fe6fd43b02b29229",
+                "reference": "f8e1bf2ae6bc2231a70f7155fe6fd43b02b29229",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Valerjan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "The best logger ever",
+            "homepage": "https://github.com/valerka-php/package",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "support": {
+                "issues": "https://github.com/valerka-php/package/issues",
+                "source": "https://github.com/valerka-php/package/tree/main"
+            },
+            "time": "2022-07-15T01:33:03+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "valerjan/logger": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
