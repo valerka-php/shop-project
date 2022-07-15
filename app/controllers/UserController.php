@@ -38,13 +38,14 @@ class UserController extends AppController
         ];
         $this->getView('registration', $params);
 
-        if (!empty($_POST)) {
-            $validate = Validator::validateData($_POST);
-            $arr = Helper::filterArray($validate, ['login', 'email', 'password']);
-            $user = $this->model->checkUser($arr, 'users');
-            if ($user === true) {
+        if (isset($_POST['submit'])) {
+            $validatedData = Validator::validateData($_POST);
+            $arr = Helper::filterArray($validatedData, ['login', 'email', 'password']);
+            $newUser = $this->model->checkUser($arr, 'users');
+
+            if ($newUser === true) {
                 $this->model->insertIntoTable($arr, 'users');
-                Session::setSession('message', 'User has been created');
+                Session::set('message', 'User has been created');
                 header('location: /user/login');
             } else {
                 header('location: /user/registration');

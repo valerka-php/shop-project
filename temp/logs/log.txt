@@ -1,1 +1,1 @@
-22:07:23 /notice/open loginAction22:07:24 /notice/open loginAction22:07:41 /notice/open loginAction
+22:07:23 /notice/open loginAction22:07:24 /notice/open loginAction22:07:41 /notice/open loginAction13:07:08  | error | databaseLog.txt | line : 67 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
