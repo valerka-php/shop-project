@@ -25,7 +25,7 @@ class Helper
             ->setBody('Here is the message itself');
 
         // Send the message
-        $result = $mailer->send($message);
+        $mailer->send($message);
     }
 
 

@@ -1,0 +1,1 @@
+<?php Framework\helpers\Helper::dd($product); ?>

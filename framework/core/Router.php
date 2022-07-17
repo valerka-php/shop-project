@@ -5,24 +5,27 @@ namespace Framework\core;
 class Router
 {
     private array $route = ['controller' => 'home', 'action' => 'index'];
+//    private array $route = [];
     public static array $params = [];
 
-    private function add($request): void
+    private function add(string $request): void
     {
+        $pattern = "(^\?[=a-zA-Z]+)";
 
         $path = explode('/', htmlspecialchars(mb_substr($request, 1)));
+
         foreach ($path as $key => $value) {
-            if (!empty($value) && $key === 0) {
+            if (!empty($value) && !preg_match($pattern, $value) && $key == 0) {
                 $this->route['controller'] = $value;
-            } elseif (!empty($value) && $key === 1) {
+            } elseif (!empty($value) && !preg_match($pattern, $value) && $key == 1) {
                 $this->route['action'] = $value;
-            } else {
-                self::$params[] .= htmlspecialchars($value);
+            } elseif (preg_match($pattern, $value)) {
+                self::$params[] .= $value;
             }
         }
     }
 
-    private function match($request): void
+    private function match(string $request): void
     {
         $this->add($request);
         $controller = $this->route['controller'];
@@ -33,7 +36,7 @@ class Router
             $action = $view . 'Action';
             if (method_exists($class, $action)) {
                 $cObj = new $class($this->route['controller']);
-                $cObj->$action();
+                $cObj->$action(self::getParams());
             } else {
                 echo '404 EROR';
             }
@@ -42,7 +45,7 @@ class Router
         }
     }
 
-    public static function run($request): void
+    public static function run(string $request): void
     {
         $obj = new self();
         $obj->match($request);

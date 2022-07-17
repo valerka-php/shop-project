@@ -4,7 +4,7 @@ namespace Framework\core;
 
 class Render
 {
-    public static function run(string $view, string $layout, string $folderView, array $params): bool
+    public static function run(string $view, string $layout, string $folderView, array $params): bool|string
     {
         $layout = './../app/views/layouts/' . $layout . '.php';
         $view = './../app/views/' . ucfirst($folderView) . '/' . $view . '.php';

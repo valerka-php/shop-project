@@ -19,9 +19,13 @@ class HomeController extends AppController
         $this->model = new Home();
     }
 
-    public function indexAction(): void
+    public function indexAction($params): void
     {
+        var_dump($params);
+
         $this->getView('product');
+
+//        Helper::mail();
 
 //        $data = $this->model->getAll('users');
 //        var_dump($data);

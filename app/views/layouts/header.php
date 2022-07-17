@@ -4,15 +4,10 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         <ul class="nav nav-pills mb-3 list" id="pills-tab" role="tablist">
-            <?php $productArr = include_once '../temp/inventory/product_list.php'; ?>
+            <?php $productArr = include '../temp/inventory/product_list.php'; ?>
             <?php foreach ($productArr as $category => $list) : ?>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="<?= $category . '-tab' ?>" data-bs-toggle="pill"
-                            data-bs-target="<?= '#pills-' . $category ?>" type="button" role="tab"
-                            aria-controls="pills-<?= $category ?>"
-                            aria-selected="false"><img class="img-nav-item" src="images/<?= $category . '.png' ?>">
-                    </button>
-                </li>
+                <?php $link = "/product/?=" . $category ?>
+                <a href="<?= $link ?>"><img class="img-nav-item" src="images/<?= $category . '.png' ?>"></a>
             <?php endforeach; ?>
         </ul>
     </ul>
@@ -34,5 +29,5 @@
             data-bs-target="#staticBackdrop"></button>
 </div>
 <div class="btn-sing-in">
-    <a class="btn btn-outline-light bi bi-person-circle" href="user/login"></a>
+    <a class="btn btn-outline-light bi bi-person-circle" href="/user/login"></a>
 </div>
