@@ -20,7 +20,7 @@ class Router
             } elseif (!empty($value) && !preg_match($pattern, $value) && $key == 1) {
                 $this->route['action'] = $value;
             } elseif (preg_match($pattern, $value)) {
-                self::$params[] .= $value;
+                self::$params[] .= mb_substr($value,2);
             }
         }
     }

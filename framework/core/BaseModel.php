@@ -43,6 +43,12 @@ class BaseModel
         return $this->connect->get($request);
     }
 
+    public function getOneByName(string $table, string $name): array | bool
+    {
+        $request = "SELECT * FROM $table WHERE `login` = $name";
+        return $this->connect->get($request);
+    }
+
     public function getAll($table): bool|array
     {
         $sql = "SELECT * FROM $table";
@@ -63,11 +69,6 @@ class BaseModel
         return $this->connect->send($request);
     }
 
-    public function getValueByColumn(string $value, string $column): array
-    {
-        $request = "SELECT $this->table.$column FROM $this->table WHERE $column='$value'";
-        return $this->connect->query($request);
-    }
 
 
 }

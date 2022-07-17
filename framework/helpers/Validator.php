@@ -15,7 +15,7 @@ class Validator
 
                 if (key_exists('password', $result)) {
                     self::validatePassword($result['password'], $result['confirmPassword']);
-                    $result['password'] = md5($result['password']);
+                    $result['password'] = password_hash($result['password'],PASSWORD_DEFAULT);
                 }
 
                 return $result;
@@ -30,11 +30,11 @@ class Validator
     {
         if (strlen($pass) < 6) {
             Session::set('message', 'Your password must be more 6 chars');
-            header('location: /user/registration');
+            header('location: /account/registration');
             exit();
         } elseif ($pass != $confirmPass) {
             Session::set('message', 'Your passwords don`t match');
-            header('location: /user/registration');
+            header('location: /account/registration');
             exit();
         } else {
             return true;

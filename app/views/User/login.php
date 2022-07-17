@@ -16,7 +16,7 @@
             <button type="submit" class="btn btn-primary btn-login" name="click">Log In</button>
         </div>
         <div>
-            <a href="registration"> You haven`t account? </a>
+            <a href="/account/registration"> You haven`t account? </a>
         </div>
 
         <div>

@@ -21,9 +21,9 @@ class HomeController extends AppController
 
     public function indexAction($params): void
     {
-        var_dump($params);
 
         $this->getView('product');
+
 
 //        Helper::mail();
 

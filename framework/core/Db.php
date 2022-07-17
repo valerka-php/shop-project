@@ -45,11 +45,12 @@ class Db
     public function get($request): bool|array
     {
         $prepare = $this->pdo->prepare($request);
+
         try {
             if ($prepare->execute()) {
                 return $prepare->fetchAll();
             }
-        } catch (\Exception $e) {
+        } catch (\PDOException $e) {
             $msg = $e->getMessage();
             $line = $e->getLine();
             $file = $e->getFile();
@@ -62,16 +63,20 @@ class Db
     public function send($request): bool
     {
         $prepare = $this->pdo->prepare($request);
+        $prepare->execute();
+        $updateRows = $prepare->rowCount();
+
         try {
-            if ($prepare->execute()) {
+            if ($updateRows >= 1) {
                 return true;
+            }else{
+                return false;
             }
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             $line = $e->getLine();
             $file = $e->getFile();
             Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
-            return false;
         }
     }
 
