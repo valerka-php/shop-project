@@ -43,7 +43,7 @@ class BaseModel
         return $this->connect->get($request);
     }
 
-    public function getOneByName(string $table, string $name): array | bool
+    public function getOneByValue(string $table, string $name): array | bool
     {
         $request = "SELECT * FROM $table WHERE `login` = $name";
         return $this->connect->get($request);

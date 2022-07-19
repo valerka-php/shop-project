@@ -23,7 +23,7 @@ class Db
 
     }
 
-    public function setConfig(): void
+    private function setConfig(): void
     {
         $config = require '../app/config/configDb.php';
 

@@ -11,6 +11,8 @@
         "friendsofphp/php-cs-fixer": "^3.8",
         "ext-pdo": "*",
         "swiftmailer/swiftmailer": "^6.0",
-        "valerjan/logger": "dev-main"
+        "valerjan/logger": "dev-main",
+        "symfony/mailer": "^6.1",
+        "psr/log": "^3.0"
     }
 }

@@ -3,6 +3,7 @@
 namespace App\controllers;
 
 use App\models\Home;
+use Framework\helpers\Mailer;
 use Valerjan\Logger;
 use Framework\helpers\Helper;
 use Swift_Mailer;
@@ -21,6 +22,8 @@ class HomeController extends AppController
 
     public function indexAction($params): void
     {
+
+//        Mailer::smptSend('nyshnui@gmail.com','Valerii','qwertysa');
 
         $this->getView('product');
 

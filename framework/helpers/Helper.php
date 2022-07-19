@@ -5,31 +5,12 @@ namespace Framework\helpers;
 use Swift_Mailer;
 use Swift_Message;
 use Swift_SmtpTransport;
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\Transport;
+use Symfony\Component\Mime\Email;
 
 class Helper
 {
-    public static function mail($email,$name,$key)
-    {
-        // Create the Transport
-        $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-            ->setUsername('educationphp7@gmail.com')
-            ->setPassword('ubanrfmdebdlrbqs');
-
-        // Create the Mailer using your created Transport
-        $mailer = new Swift_Mailer($transport);
-
-
-        $text = "Dear $name if you want confirm your email please click here http://nixproject.ua/account/activation/?=" . $key;
-        // Create a message
-        $message = (new Swift_Message('Confirm email'))
-            ->setFrom(['educationphp7@gmail.com' => 'NixEducation =^.^= PHP'])
-            ->setTo([$email => $name])
-            ->setBody($text);
-
-        // Send the message
-        $mailer->send($message);
-    }
-
 
     public static function dd(array $arr)
     {

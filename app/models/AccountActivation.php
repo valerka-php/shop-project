@@ -2,12 +2,13 @@
 
 namespace App\models;
 
-class AccountActivation extends Account
+use Framework\core\BaseModel;
+
+class AccountActivation extends BaseModel
 {
-    public function confirm(string $vkey): bool
+    public function activate(string $vkey): bool
     {
         $request = "UPDATE users SET `verified` = '1' WHERE (vkey = '$vkey')";
         return $this->connect->send($request);
-
     }
 }

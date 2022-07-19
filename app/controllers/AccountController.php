@@ -50,7 +50,7 @@ class AccountController extends AppController
     public function activationAction($params)
     {
         $model = new AccountActivation();
-        $confirmed = $model->confirm(implode($params));
+        $confirmed = $model->activate(implode($params));
         if ($confirmed){
             $this->getView('activation', $params, 'user');
         }else{
