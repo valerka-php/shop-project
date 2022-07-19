@@ -9,7 +9,7 @@ class Mailer
 {
     private static string $dsn, $sendFrom, $subject, $txt;
 
-    private static function setConfig()
+    private static function setConfig(): void
     {
         $config = require '../app/config/mailConf.php';
         self::$dsn = "smtp://{$config['user']}:{$config['pass']}@{$config['smtp']}";
@@ -17,14 +17,13 @@ class Mailer
         self::$subject = "{$config['subject']}";
     }
 
-    private static function createText($name, $vkey)
+    private static function createText(string $name, string $vkey): void
     {
         $body = require '../app/config/mailText.php';
         self::$txt = '<h1 style="text-align: center;color: chocolate"> Dear ' . $name . ' ' . $body . $vkey . '</h1>';
     }
 
-
-    public static function smptSend($email, $name, $vkey)
+    public static function smptSend(string $email, string $name, string $vkey): void
     {
         self::setConfig();
         self::createText($name, $vkey);
