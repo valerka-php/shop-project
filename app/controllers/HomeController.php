@@ -3,6 +3,7 @@
 namespace App\controllers;
 
 use App\models\Home;
+use App\models\Product;
 use Framework\helpers\Mailer;
 use Valerjan\Logger;
 use Framework\helpers\Helper;
@@ -22,10 +23,15 @@ class HomeController extends AppController
 
     public function indexAction($params): void
     {
-
-//        Mailer::smptSend('nyshnui@gmail.com','Valerii','qwertysa');
-
         $this->getView('product');
+
+
+        # add products into db
+//        $product = new Product();
+//        $list = require '../temp/inventory/product_list.php';
+//        $product->addProduct($list);
+
+
 
 
 //        Helper::mail();

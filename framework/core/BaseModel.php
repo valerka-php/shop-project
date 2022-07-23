@@ -49,9 +49,9 @@ class BaseModel
         return $this->connect->get($request);
     }
 
-    public function getAll($table): bool|array
+    public function getAll($table,$title = '*'): bool|array
     {
-        $sql = "SELECT * FROM $table";
+        $sql = "SELECT $title FROM $table";
         return $this->connect->get($sql);
     }
 
@@ -69,6 +69,17 @@ class BaseModel
         return $this->connect->send($request);
     }
 
+    public function insertOne(string $column,string $value,string $table)
+    {
+        $sql = "INSERT INTO $table ({$column}) VALUES ({$value})";
+        return $this->connect->send($sql);
+    }
+
+    public function insertOneWhere(string $column, string $value, string $table, string $where)
+    {
+        $sql = "INSERT INTO $table ({$column}) VALUES ({$value})";
+        return $this->connect->send($sql);
+    }
 
 
 }

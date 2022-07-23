@@ -5,6 +5,7 @@ namespace App\controllers;
 use App\models\Account;
 use App\models\AccountActivation;
 use Framework\helpers\Helper;
+use Framework\helpers\Mailer;
 use Framework\helpers\Validator;
 
 class AccountController extends AppController
@@ -30,12 +31,12 @@ class AccountController extends AppController
 
         if (isset($_POST['submit'])) {
             $validatedData = Validator::validate($_POST, 'array');
-            $arr = Helper::filterArray($validatedData, ['login', 'email', 'password']);
-            $newUser = $this->model->checkUser($arr, 'users');
+            $userData = Helper::filterArray($validatedData, ['login', 'email', 'password']);
+            $newUser = $this->model->checkUser($userData, 'users');
             if ($newUser === true) {
-                $arr['vkey'] = $this->model->verifyKey;
-                $this->model->insertIntoTable($arr, 'users');
-                Helper::mail($arr['email'], $_POST['name'], $arr['vkey']);
+                $userData['vkey'] = $this->model->verifyKey;
+                $this->model->insertIntoTable($userData, 'users');
+                Mailer::smptSend($userData['email'], $_POST['name'], $userData['vkey']);
                 $this->getView('succes', $params, 'user');
             } else {
                 header('location: /account/registration');
@@ -51,16 +52,11 @@ class AccountController extends AppController
     {
         $model = new AccountActivation();
         $confirmed = $model->activate(implode($params));
-        if ($confirmed){
+        if ($confirmed) {
             $this->getView('activation', $params, 'user');
-        }else{
+        } else {
             exit(require_once '404.php');
         }
-
-
-
-
-
 
 
     }
