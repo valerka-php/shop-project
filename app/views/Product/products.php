@@ -1,1 +1,1 @@
-<?php Framework\helpers\Helper::dd($product); ?>
+<div class="product" id="products" ></div>

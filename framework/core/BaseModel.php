@@ -43,9 +43,9 @@ class BaseModel
         return $this->connect->get($request);
     }
 
-    public function getOneByValue(string $table, string $name): array | bool
+    public function getOneWhere(string $column,string $where,string $table): array | bool
     {
-        $request = "SELECT * FROM $table WHERE `login` = $name";
+        $request = "SELECT * FROM $table WHERE `$column` = $where";
         return $this->connect->get($request);
     }
 
@@ -71,13 +71,13 @@ class BaseModel
 
     public function insertOne(string $column,string $value,string $table)
     {
-        $sql = "INSERT INTO $table ({$column}) VALUES ({$value})";
+        $sql = "INSERT INTO $table ($column) VALUES ($value)";
         return $this->connect->send($sql);
     }
 
     public function insertOneWhere(string $column, string $value, string $table, string $where)
     {
-        $sql = "INSERT INTO $table ({$column}) VALUES ({$value})";
+        $sql = "INSERT INTO $table ($column) VALUES ($value) = $where";
         return $this->connect->send($sql);
     }
 

@@ -6,7 +6,7 @@ use Framework\core\BaseModel;
 
 class Product extends BaseModel
 {
-    public function addProduct(array $list)
+    public function addProducts(array $list)
     {
         $typeTable = $this->getAll('type_product');
 
@@ -26,6 +26,22 @@ class Product extends BaseModel
             }
         }
     }
+
+    public function getProducts(string $type)
+    {
+        $sql = "
+            SELECT product.title,product.description,type_product.type,price_product.price,count_product.count
+            FROM product_has_type
+            INNER JOIN product ON product_has_type.product_id = product.id
+            INNER JOIN type_product ON product_has_type.type_id = type_product.type_id 
+            INNER JOIN price_product ON product.id = price_product.price_id
+            INNER JOIN count_product ON product.id = count_product.count_id WHERE type = '$type'
+
+        ";
+
+        return $this->connect->get($sql);
+    }
+
 
 
 }

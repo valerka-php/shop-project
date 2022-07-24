@@ -42,7 +42,7 @@ class Db
     }
 
     /** @noinspection PhpInconsistentReturnPointsInspection */
-    public function get($request): bool|array
+    public function get(string $request): bool|array
     {
         $prepare = $this->pdo->prepare($request);
 
@@ -60,7 +60,7 @@ class Db
     }
 
     /** @noinspection PhpInconsistentReturnPointsInspection */
-    public function send($request): bool
+    public function send(string $request): bool
     {
         $prepare = $this->pdo->prepare($request);
         $prepare->execute();

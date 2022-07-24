@@ -96,6 +96,11 @@
     display: flex;
 }
 
+.img-nav{
+    display: flex;
+    justify-content: center;
+}
+
 .nav-item {
     width: 176px;
     display: flex;
@@ -103,6 +108,9 @@
 }
 
 .img-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 75px;
     height: auto;
     font-size: 35px;
@@ -172,15 +180,6 @@
     background-color: gainsboro;
 }
 
-
-.card {
-    display: flex;
-    top: 15px;
-    background-color: whitesmoke;
-    margin-right: 25px;
-    margin-bottom: 25px;
-}
-
 .header {
     background-color: grey;
     display: flex;
@@ -235,30 +234,33 @@
     background-color: lightgrey;
 }
 
-.product {
-    display: flex;
-    justify-content: start;
-    height: 250px;
-}
 
-.product-cart {
-    padding: 15px;
-    margin-left: 95px;
-    background-color: darkgrey;
-    width: 350px;
-    height: 300px;
-    border-radius: 25px;
+.count{
+    color: forestgreen;
 }
 
 .price {
-    font-size: 55px;
+    font-size: 25px;
     color: red;
 }
 
+.product{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 75px 35px 35px;
+}
 
-.bg-img {
-    background-image: url("../../img/online-shop.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+.card{
+    margin-bottom: 25px;
+}
+
+.card-img-top{
+    width: 225px;
+    height: 225px;
+}
+
+.card-body{
+    width: 275px;
+    height: 220px;
 }

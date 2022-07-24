@@ -76,3 +76,13 @@
 19:07:02  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
 19:07:03  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
 19:07:31  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\-\php' at line 1
+18:07:53  | error | /var/www/nix-project/framework/core/Db.php | line : 52 | SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'QWE' at line 1
+19:07:03  | error | /var/www/nix-project/framework/core/Db.php | line : 52 | SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'QWE' at line 1
+13:07:22  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'product'
+13:07:23  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'product'
+13:07:27  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'product'
+13:07:41  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'product'
+13:07:58  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'product'
+13:07:36  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'motorcycle' in 'where clause'
+13:07:56  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'car' in 'where clause'
+13:07:10  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'car' in 'where clause'

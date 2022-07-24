@@ -7,7 +7,7 @@
             <?php $productArr = include '../temp/inventory/product_list.php'; ?>
             <?php foreach ($productArr as $category => $list) : ?>
                 <?php $link = "/product/?=" . $category ?>
-                <a href="<?= $link ?>"><img class="img-nav-item" src="images/<?= $category . '.png' ?>"></a>
+                <div class="img-nav" ><a href="<?= $link ?>"><img class="img-nav-item"  src="/images/<?=  $category . '.png' ?>"></a></div>
             <?php endforeach; ?>
         </ul>
     </ul>

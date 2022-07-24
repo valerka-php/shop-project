@@ -2,23 +2,23 @@
 
 namespace App\controllers;
 
+use App\models\Home;
+use App\models\Product;
+
 class ProductController extends AppController
 {
-    public function indexAction($params)
+    private Product $model;
+
+    public function __construct($route)
     {
-        $data = require_once '../temp/inventory/product_list.php';
-        $type = mb_substr($params[0], 2);
-        $result = [];
-        foreach ($data as $k => $v) {
-            if ($k == $type) {
-                $result[] = $v;
-            }
-        }
+        parent::__construct($route);
+        $this->model = new Product();
+    }
 
-        $params = [
-            'product' => $result,
-        ];
-
-        $this->getView('products', $params);
+    public function indexAction($type)
+    {
+        $params = [];
+        file_put_contents('api/product', json_encode($this->model->getProducts($type[0])));
+        $this->getView('products', $params, 'product');
     }
 }

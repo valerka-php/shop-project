@@ -4,12 +4,8 @@ namespace App\controllers;
 
 use App\models\Home;
 use App\models\Product;
-use Framework\helpers\Mailer;
-use Valerjan\Logger;
 use Framework\helpers\Helper;
-use Swift_Mailer;
-use Swift_Message;
-use Swift_SmtpTransport;
+
 
 class HomeController extends AppController
 {
@@ -32,16 +28,6 @@ class HomeController extends AppController
 //        $product->addProduct($list);
 
 
-
-
-//        Helper::mail();
-
-//        $data = $this->model->getAll('users');
-//        var_dump($data);
-//
-
-//        Helper::dd($all);
-//        Logger::log(LogLevel::NOTICE, "open indexAction\r");
     }
 
     public function testAction(): void
