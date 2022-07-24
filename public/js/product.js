@@ -1,5 +1,6 @@
 const product = async () => {
-    const response = await fetch('http://nixproject.ua/api/product', {
+    const typeName = window.location.search.split('=')
+    const response = await fetch(`http://nixproject.ua/application/product/?type=${typeName[1]}`, {
         method: 'GET',
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -7,10 +8,7 @@ const product = async () => {
     });
 
     const content = await response.json();
-    console.log(content);
-
     let list = document.getElementById("products");
-
     for (let key in content) {
         list.innerHTML += `
             <div class="card">
@@ -27,7 +25,6 @@ const product = async () => {
         `
         console.log(content[key])
     }
-
 };
 
 product();

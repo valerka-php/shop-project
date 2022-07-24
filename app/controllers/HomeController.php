@@ -6,7 +6,6 @@ use App\models\Home;
 use App\models\Product;
 use Framework\helpers\Helper;
 
-
 class HomeController extends AppController
 {
     private Home $model;
@@ -17,22 +16,15 @@ class HomeController extends AppController
         $this->model = new Home();
     }
 
-    public function indexAction($params): void
+    public function indexAction(): void
     {
         $this->getView('product');
-
-
-        # add products into db
-//        $product = new Product();
-//        $list = require '../temp/inventory/product_list.php';
-//        $product->addProduct($list);
-
 
     }
 
     public function testAction(): void
     {
-        echo 'Home controller test action';
+        echo 'Home controller testController action';
 //        Logger::log(LogLevel::NOTICE, "open testAction\r");
     }
 }

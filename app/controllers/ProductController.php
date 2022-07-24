@@ -4,6 +4,7 @@ namespace App\controllers;
 
 use App\models\Home;
 use App\models\Product;
+use Framework\helpers\Session;
 
 class ProductController extends AppController
 {
@@ -15,10 +16,8 @@ class ProductController extends AppController
         $this->model = new Product();
     }
 
-    public function indexAction($type)
+    public function indexAction()
     {
-        $params = [];
-        file_put_contents('api/product', json_encode($this->model->getProducts($type[0])));
-        $this->getView('products', $params, 'product');
+        $this->getView('products', [], 'product');
     }
 }

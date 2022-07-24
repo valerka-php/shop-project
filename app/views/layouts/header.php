@@ -6,7 +6,7 @@
         <ul class="nav nav-pills mb-3 list" id="pills-tab" role="tablist">
             <?php $productArr = include '../temp/inventory/product_list.php'; ?>
             <?php foreach ($productArr as $category => $list) : ?>
-                <?php $link = "/product/?=" . $category ?>
+                <?php $link = "/product/?type=" . $category ?>
                 <div class="img-nav" ><a href="<?= $link ?>"><img class="img-nav-item"  src="/images/<?=  $category . '.png' ?>"></a></div>
             <?php endforeach; ?>
         </ul>

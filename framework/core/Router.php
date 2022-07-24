@@ -5,8 +5,6 @@ namespace Framework\core;
 class Router
 {
     private array $route = ['controller' => 'home', 'action' => 'index'];
-//    private array $route = [];
-    public static array $params = [];
 
     private function add(string $request): void
     {
@@ -19,8 +17,6 @@ class Router
                 $this->route['controller'] = $value;
             } elseif (!empty($value) && !preg_match($pattern, $value) && $key == 1) {
                 $this->route['action'] = $value;
-            } elseif (preg_match($pattern, $value)) {
-                self::$params[] .= mb_substr($value,2);
             }
         }
     }
@@ -36,7 +32,7 @@ class Router
             $action = $view . 'Action';
             if (method_exists($class, $action)) {
                 $cObj = new $class($this->route['controller']);
-                $cObj->$action(self::getParams());
+                $cObj->$action();
             } else {
                 echo '404 EROR';
             }
@@ -51,8 +47,4 @@ class Router
         $obj->match($request);
     }
 
-    public static function getParams(): array
-    {
-        return self::$params;
-    }
 }

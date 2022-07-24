@@ -20,7 +20,7 @@ class UserController extends AppController
     public function loginAction()
     {
         $params = [
-            'test' => 'qwerty',
+            'testController' => 'qwerty',
             'test2' => '123',
             'title' => 'login'
         ];
