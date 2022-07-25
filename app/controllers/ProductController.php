@@ -18,6 +18,11 @@ class ProductController extends AppController
 
     public function indexAction()
     {
-        $this->getView('products', [], 'product');
+        $params = [
+            'title' => $_GET['type'],
+        ];
+        $this->getView('products', $params, 'product');
     }
+
+
 }

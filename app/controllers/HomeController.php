@@ -18,7 +18,11 @@ class HomeController extends AppController
 
     public function indexAction(): void
     {
-        $this->getView('product');
+//        $list = require '../temp/inventory/product_list.php';
+//        $model = new Product();
+//        $model->addProducts($list);
+
+        $this->getView('home');
 
     }
 

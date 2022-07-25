@@ -1,3 +1,1 @@
-<div class="product" id="products" >
-
-</div>
+<div class="product" id="products" > </div>

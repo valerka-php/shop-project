@@ -4,7 +4,7 @@ namespace Framework\helpers;
 
 class Validator
 {
-    public static function validate(mixed $data, string $type): string|array
+    public static function validate(mixed $data, string $type): string|array|bool
     {
         switch ($type) {
             case 'array':
@@ -15,9 +15,8 @@ class Validator
 
                 if (key_exists('password', $result)) {
                     self::validatePassword($result['password'], $result['confirmPassword']);
-                    $result['password'] = password_hash($result['password'],PASSWORD_DEFAULT);
+                    $result['password'] = password_hash($result['password'], PASSWORD_DEFAULT);
                 }
-
                 return $result;
             case 'string':
                 return trim(htmlspecialchars($data));
@@ -26,7 +25,7 @@ class Validator
         }
     }
 
-   private static function validatePassword(string $pass, string $confirmPass): string|bool
+    private static function validatePassword(string $pass, string $confirmPass): string|bool
     {
         if (strlen($pass) < 6) {
             Session::set('message', 'Your password must be more 6 chars');

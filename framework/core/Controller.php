@@ -7,7 +7,7 @@ abstract class Controller
 {
     public string $folderView = '';
 
-    public function __construct($route)
+    public function __construct(string $route)
     {
         $this->folderView = $route;
     }

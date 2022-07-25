@@ -37,7 +37,7 @@ class AccountController extends AppController
                 $userData['vkey'] = $this->model->verifyKey;
                 $this->model->insertIntoTable($userData, 'users');
                 Mailer::smptSend($userData['email'], $_POST['name'], $userData['vkey']);
-                $this->getView('succes', $params, 'user');
+                header('location: /account/succes');
             } else {
                 header('location: /account/registration');
             }
@@ -61,8 +61,9 @@ class AccountController extends AppController
 
     }
 
-    public function succesAction($params)
+    public function succesAction()
     {
 
+        $this->getView('succes');
     }
 }
