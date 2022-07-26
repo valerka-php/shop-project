@@ -18,7 +18,7 @@
     <?php require_once '../app/views/layouts/header.php' ?>
 </header>
 <main class="main">
-    <?php require_once '../app/views/layouts/cart.php' ?>
+    <?php require_once '../app/views/layouts/miniCart.php' ?>
 </main>
 </body>
 </html>

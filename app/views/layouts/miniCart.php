@@ -7,24 +7,20 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-order">
-                <ol>
-                    <li><img class="img-list" src="images/car4.jpg"> car <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
-                    <li><img class="img-list" src="images/car3.jpg"> car <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
-                    <li><img class="img-list" src="images/motorcycle1.jpg"> motorcycle <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
-                    <li><img class="img-list" src="images/motorcycle3.jpg"> motorcycle <b>: 155 USD</b>
-                        <button class="btn-close"></button>
-                    </li>
+                <ol id="cart-list">
+
                 </ol>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">back</button>
-                <div class="modal-price"> total price: 1 085 USD</div>
+                <div>
+                    <div class="modal-price">
+                        0
+                    </div>
+                    <div>
+                        [USD]
+                    </div>
+                </div>
                 <button type="button" class="btn btn-primary">pay</button>
             </div>
         </div>

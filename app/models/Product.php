@@ -32,7 +32,7 @@ class Product extends BaseModel
     public function getProducts(string $type)
     {
         $sql = "
-            SELECT product.title,image_product.image,product.description,type_product.type,price_product.price,count_product.count
+            SELECT product.id,product.title,image_product.image,product.description,type_product.type,price_product.price,count_product.count
             FROM product_has_type  
             INNER JOIN product ON product_has_type.product_id = product.id
             INNER JOIN type_product ON product_has_type.type_id = type_product.type_id

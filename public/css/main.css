@@ -277,3 +277,26 @@
     width: 275px;
     height: 220px;
 }
+
+.add-to-cart:hover{
+    background-color: forestgreen;
+    color: black;
+}
+
+.add-to-cart:active{
+    background-color: white;
+}
+
+.cart-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+}
+
+.plus minus {
+
+}
+
+

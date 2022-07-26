@@ -8,13 +8,14 @@ const products = async () => {
     });
 
     const content = await response.json();
-    await getProducts(content);
-
+    await showProducts(content);
 };
 
-function getProducts(content){
+function showProducts(content){
+    const sort = {}
     let list = document.getElementById("products");
     for (let key in content) {
+        sort[content[key].id] = content[key];
         list.innerHTML += `
             <div class="card">
                 <img src="../images/${content[key].image}.jpg" class="card-img-top" alt="image not found">
@@ -23,12 +24,14 @@ function getProducts(content){
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. ${content[key].description}</p>
                     <div>
                         <p class="count">count: ${content[key].count} </p>
-                        <a href="#" class="btn btn-primary" data-id="${content[key].id}">purchase < ${content[key].price} USD ></a>
+                        <button class="btn btn-primary add-to-cart" id="${content[key].id}">${content[key].id} purchase < ${content[key].price} USD ></button>
                     </div>
                 </div>
             </div>
         `
-        // console.log(content[key])
+        list.onclick = event => {
+            addToCart(sort[event.target.id])
+        }
     }
 }
 

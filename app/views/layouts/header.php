@@ -26,7 +26,7 @@
 </div>
 <div class="btn-order">
     <button type="button" class="btn btn-outline-light bi bi-cart3 cart" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"></button>
+            data-bs-target="#staticBackdrop" onclick="showCart()"></button>
 </div>
 <div class="btn-sing-in">
     <a class="btn btn-outline-light bi bi-person-circle" href="/user/login"></a>
