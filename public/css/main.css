@@ -134,10 +134,6 @@
     width: 195px;
 }
 
-.card-img-top {
-    width: auto;
-    height: 185px;
-}
 
 .dropdown-menu {
     background-color: gainsboro;
@@ -171,11 +167,6 @@
     margin-top: 7px;
 }
 
-.modal-order .btn-close {
-    margin-left: 55px;
-
-}
-
 .modal-order {
     overflow: auto;
     position: relative;
@@ -183,8 +174,8 @@
 }
 
 .modal-content {
-    height: 460px;
-    width: 650px;
+    height: 480px;
+    width: 660px;
     display: flex;
     justify-content: space-between;
 }
@@ -265,12 +256,22 @@
 }
 
 .card{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 37px;
 }
 
 .card-img-top{
-    width: 225px;
-    height: 225px;
+    width: 275px;
+    height: 220px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 .card-body{
@@ -287,16 +288,28 @@
     background-color: white;
 }
 
+.add-to-cart{
+    width: 95px;
+    height: 45px;
+}
+
 .cart-product{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     font-size: 17px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
 }
 
-.plus minus {
-
+.total{
+    width: 42px;
 }
 
+.plus .minus {
+    padding: 0;
+}
 

@@ -6,10 +6,8 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Order list</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-order">
-                <ol id="cart-list">
+            <div class="modal-order" id="cart-list">
 
-                </ol>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">back</button>

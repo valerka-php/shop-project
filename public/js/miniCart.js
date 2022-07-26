@@ -8,6 +8,7 @@ function addToCart(obj) {
         cart[obj.id].total++
     }
 
+    calculatePrice(cart[obj.id].id)
     saveCart();
 }
 
@@ -15,63 +16,60 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-function getLocalstorage() {
-    return JSON.parse(localStorage.getItem('cart'))
+function getLocalstorage(name) {
+    return JSON.parse(localStorage.getItem(`${name}`))
 }
 
 function showCart() {
-    const storage = getLocalstorage()
-    let miniCart = document.getElementById('cart-list')
+    const storage = getLocalstorage('cart')
+    let cartList = document.getElementById('cart-list')
     let list = '';
     for (let key in storage) {
         list += `
             <li class="cart-product">
                 <div>ID: ${storage[key].id}</div>
-                <img class="img-list" src="../images/${storage[key].image}.jpg"> ${storage[key].title} 
+                <div><img class="img-list" src="../images/${storage[key].image}.jpg" alt=""> ${storage[key].title} </div>
                 <div id="price-id-${storage[key].id}">${storage[key].price}</div>[USD]
-                <button class="btn minus bi bi-dash" onclick="decreaseProduct(${storage[key].id})"></button>
-                <div class="total" id="total-id-${storage[key].id}" >${storage[key].total}</div>
-                <button class="btn plus bi bi-plus" onclick="increaseProduct(${storage[key].id})"></button>
+                    <div>
+                        <button class="btn minus bi bi-dash" onclick="decreaseProduct(${storage[key].id})"></button>
+                    </div>
+                    <div class="total" id="total-id-${storage[key].id}" >${storage[key].total}</div>
+                    <div>
+                        <button class="btn plus bi bi-plus" onclick="increaseProduct(${storage[key].id})"></button>
+                    </div>
                 <button class="btn bi bi-trash3"></button>
             </li>
             `
     }
-    miniCart.innerHTML = list;
+    cartList.innerHTML = list;
 }
 
-function decalculatePrice(id,count){
-    let price = document.getElementById(`price-id-${id}`)
+function recalculatePrice(id,count){
+    let price = cart[id].price;
     let totalPrice = document.querySelector('.modal-price');
-
     if (count > 1){
-        totalPrice.innerHTML = parseInt(totalPrice.textContent) - parseInt(price.textContent)
+        totalPrice.innerHTML = parseInt(totalPrice.textContent) - price;
     }
-
-    // console.log(price.textContent);
-    // console.log(totalPrice.textContent);
 }
 
 function calculatePrice(id) {
-    let price = document.getElementById(`price-id-${id}`)
+    let price = cart[id].price;
     let totalPrice = document.querySelector('.modal-price');
 
-    totalPrice.innerHTML = parseInt(totalPrice.textContent) + parseInt(price.textContent)
+    totalPrice.innerHTML = parseInt(totalPrice.textContent) + price
 
-    // console.log(price.textContent);
-    // console.log(totalPrice.textContent);
 }
 
 function increaseProduct(id) {
     let count = document.getElementById(`total-id-${id}`)
     count.innerHTML++;
-    let total = parseInt(count.textContent);
-    calculatePrice(id,total)
+    calculatePrice(id)
 }
 
 function decreaseProduct(id) {
     let count = document.getElementById(`total-id-${id}`)
-    decalculatePrice(id,parseInt(count.textContent));
-    if (parseInt(count.textContent) !== 1) {
+    recalculatePrice(id,parseInt(count.textContent));
+    if (parseInt(count.textContent) > 1) {
         count.innerHTML--;
     }
 
