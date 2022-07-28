@@ -292,6 +292,17 @@
     height: 45px;
 }
 
+.product-almost-sold-out{
+    background-color: #eee25a;
+}
+
+
+.product-sold-out{
+    background-color: darkgrey;
+    width: 95px;
+    height: 45px;
+}
+
 .cart-product{
     display: flex;
     justify-content: space-between;
