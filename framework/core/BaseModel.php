@@ -72,7 +72,6 @@ class BaseModel
     public function insertOne(string $column,string $value,string $table)
     {
         $sql = "INSERT INTO $table ($column) VALUES ($value)";
-        echo $sql . '<br>';
         return $this->connect->send($sql);
     }
 

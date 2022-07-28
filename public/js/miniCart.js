@@ -1,4 +1,4 @@
-const cart = {};
+const cart = getLocalstorage('cart');
 
 function addToCart(obj) {
     if (cart[obj.id] === undefined) {
@@ -18,6 +18,10 @@ function saveCart() {
 
 function getLocalstorage(name) {
     return JSON.parse(localStorage.getItem(`${name}`))
+}
+
+function setLocalStorage(name,value){
+    localStorage.setItem(`${name}`, JSON.stringify(value) );
 }
 
 function showCart() {
@@ -42,6 +46,7 @@ function showCart() {
             `
     }
     cartList.innerHTML = list;
+    document.querySelector('.modal-price').innerHTML = getLocalstorage('total-price')
 }
 
 function recalculatePrice(id,count){
@@ -54,21 +59,26 @@ function recalculatePrice(id,count){
 
 function calculatePrice(id) {
     let price = cart[id].price;
-    let totalPrice = document.querySelector('.modal-price');
-
-    totalPrice.innerHTML = parseInt(totalPrice.textContent) + price
+    // console.log(price)
+    let store = getLocalstorage('total-price') + price
+    // console.log(store)
+    setLocalStorage('total-price',store)
 
 }
 
 function increaseProduct(id) {
     let count = document.getElementById(`total-id-${id}`)
-    count.innerHTML++;
+    cart[id].total = ++count.textContent
+
     calculatePrice(id)
+    saveCart();
 }
 
 function decreaseProduct(id) {
     let count = document.getElementById(`total-id-${id}`)
+
     recalculatePrice(id,parseInt(count.textContent));
+
     if (parseInt(count.textContent) > 1) {
         count.innerHTML--;
     }
