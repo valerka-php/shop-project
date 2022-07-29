@@ -21,8 +21,6 @@
     <?php require_once '../app/views/layouts/miniCart.php' ?>
 </main>
 
-<!--<script src="../js/product.js" > </script>-->
-
 <script src="../js/miniCart.js" > </script>
 </body>
 </html>

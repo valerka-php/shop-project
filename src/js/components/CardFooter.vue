@@ -1,19 +1,22 @@
 <template>
-  <div class="card-footer" >
-    <btn-purchase v-bind:counts="product.count"> </btn-purchase>
-    <p v-if="product.count < 1" class="price"> sold out </p>
-    <p v-else class="price"> {{  product.price }} USD </p>
+  <div class="card-footer">
+    <btn-purchase v-bind:counts="count"></btn-purchase>
+    <p v-if="count < 1" class="price"> sold out </p>
+    <p v-else class="price"> {{ price }} USD </p>
   </div>
-  <product-count v-bind:count="product.count"> </product-count>
+  <div class="card-footer">
+    <p class="count">count: {{ count }} </p>
+  </div>
 </template>
 
 <script>
-import ProductCount from "./ProductCount";
 export default {
-  components: {ProductCount},
-  props:{
-    product:{
-      type: Array,
+  props: {
+    count: {
+      type: Number,
+    },
+    price: {
+      type: Number,
     }
   },
   name: "CardFooter"

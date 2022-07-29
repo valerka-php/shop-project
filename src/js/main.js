@@ -1,6 +1,6 @@
 import  { createApp } from "vue";
 import App from "./App";
-import Card from "./components/Card";
+import CardList from "./components/CardList";
 import components from "./components/UI/index"
 
 const app = createApp(App);
@@ -9,5 +9,5 @@ components.forEach( component => {
 });
 
 
-app.component('card', Card)
+app.component('card-list', CardList)
 app.mount('#app')

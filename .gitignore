@@ -2,4 +2,4 @@
 /node_modules/
 /.php-cs-fixer.cache
 /.idea
-
+/public/js/main.js
