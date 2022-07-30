@@ -31,12 +31,17 @@ class AccountController extends AppController
 
         if (isset($_POST['submit'])) {
             $validatedData = Validator::validate($_POST, 'array');
-            $userData = Helper::filterArray($validatedData, ['login', 'email', 'password']);
-            $newUser = $this->model->checkUser($userData, 'users');
+            $accountData = Helper::filterArray($validatedData, ['login', 'email', 'password']);
+            $userData = [
+              'name' => $validatedData['name'],
+              'surname' => $validatedData['surname']
+            ];
+            $newUser = $this->model->checkAccount($accountData, 'users');
             if ($newUser === true) {
-                $userData['vkey'] = $this->model->verifyKey;
-                $this->model->insertIntoTable($userData, 'users');
-                Mailer::smptSend($userData['email'], $_POST['name'], $userData['vkey']);
+                $accountData['vkey'] = $this->model->verifyKey;
+                $this->model->insertIntoTable($accountData, 'users');
+                $this->model->insertIntoTable($userData, 'users_data');
+                Mailer::smptSend($accountData['email'], $validatedData['name'], $accountData['vkey']);
                 header('location: /account/succes');
             } else {
                 header('location: /account/registration');

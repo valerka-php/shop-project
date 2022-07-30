@@ -2,7 +2,9 @@
 
 namespace App\controllers;
 
+use App\models\Product;
 use App\models\User;
+use App\models\UserLogin;
 use Framework\helpers\Helper;
 use Framework\helpers\Session;
 use Framework\helpers\Validator;
@@ -19,13 +21,34 @@ class UserController extends AppController
 
     public function loginAction()
     {
+        $params = [];
+
+        if (isset($_SESSION['user'])) {
+            header("location:/user/profile/");
+        }
+
+        if (!empty($_POST)) {
+            $checkUser = new UserLogin();
+            $checked = $checkUser->checkUser($_POST['login'], $_POST['password']);
+
+            if (is_array($checked)) {
+                Session::set('user', $checked['login']);
+                Session::set('userName', $checked['name']);
+                header("location:/user/profile/");
+            }
+        }
+
+        $this->getView('login', $params, 'user');
+    }
+
+    public function profileAction()
+    {
         $params = [
-            'testController' => 'qwerty',
-            'test2' => '123',
-            'title' => 'login'
+            'name' => $_SESSION['userName'],
         ];
-        $this->getView('login', $params ,'user');
-//        Logger::log(LogLevel::NOTICE, "open loginAction\r");
+
+
+        $this->getView('profile', $params,'user');
     }
 
 }

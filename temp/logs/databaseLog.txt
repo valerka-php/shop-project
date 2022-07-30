@@ -92,3 +92,17 @@
 08:07:16  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_product.product_id' in 'on clause'
 08:07:18  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_product.product_id' in 'on clause'
 08:07:20  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'image_product.product_id' in 'on clause'
+12:07:18  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka-php' in 'where clause'
+12:07:12  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:22  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:28  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:35  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:48  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:58  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:06  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:21  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:26  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'valerka' in 'where clause'
+12:07:29  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',password,vkey = 'valerka-php'' at line 1
+12:07:26  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',password,vkey = 'valerka-php'' at line 1
+12:07:49  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',password,vkey = 'valerka-php'' at line 1
+12:07:11  | error | /var/www/nix-project/framework/core/Db.php | line : 50 | SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',password,vkey = 'valerka-php'' at line 1

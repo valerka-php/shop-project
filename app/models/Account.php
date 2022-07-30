@@ -14,7 +14,7 @@ class Account extends BaseModel
         return md5(time() . $user);
     }
 
-    public function checkUser(array $userData, string $table): bool|string
+    public function checkAccount(array $userData, string $table): bool|string
     {
         $login = $userData['login'];
         $email = $userData['email'];

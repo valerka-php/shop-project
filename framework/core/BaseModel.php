@@ -45,7 +45,7 @@ class BaseModel
 
     public function getOneWhere(string $column,string $where,string $table): array | bool
     {
-        $request = "SELECT * FROM $table WHERE `$column` = $where";
+        $request = "SELECT * FROM $table WHERE $column = '$where'";
         return $this->connect->get($request);
     }
 
