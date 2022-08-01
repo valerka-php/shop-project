@@ -2,7 +2,6 @@
 
 namespace Framework\core;
 
-
 abstract class Controller
 {
     public string $folderView = '';
@@ -12,8 +11,8 @@ abstract class Controller
         $this->folderView = $route;
     }
 
-    public function getView(string $view, array $params = [],string $layout = 'default' ): bool
+    public function getView(string $view, array $params = [], string $layout = 'default'): bool
     {
-       return Render::run($view, $layout, $this->folderView, $params);
+        return Render::run($view, $layout, $this->folderView, $params);
     }
 }

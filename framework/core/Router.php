@@ -8,7 +8,7 @@ class Router
 
     private function add(string $request): void
     {
-        $pattern = "(^\?[=a-zA-Z]+)";
+        $pattern = "(\?[a-zA-Z]+)";
 
         $path = explode('/', htmlspecialchars(mb_substr($request, 1)));
 

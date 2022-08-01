@@ -21,7 +21,9 @@ class UserController extends AppController
 
     public function loginAction()
     {
-        $params = [];
+        $params = [
+            'title' => 'login'
+        ];
 
         if (isset($_SESSION['user'])) {
             header("location:/user/profile/");
@@ -45,10 +47,10 @@ class UserController extends AppController
     {
         $params = [
             'name' => $_SESSION['userName'],
+            'title' => 'profile'
         ];
 
 
-        $this->getView('profile', $params,'user');
+        $this->getView('profile', $params, 'user');
     }
-
 }

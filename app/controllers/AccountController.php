@@ -20,7 +20,6 @@ class AccountController extends AppController
 
     public function indexAction()
     {
-
     }
 
     public function registrationAction()
@@ -33,8 +32,8 @@ class AccountController extends AppController
             $validatedData = Validator::validate($_POST, 'array');
             $accountData = Helper::filterArray($validatedData, ['login', 'email', 'password']);
             $userData = [
-              'name' => $validatedData['name'],
-              'surname' => $validatedData['surname']
+                'name' => $validatedData['name'],
+                'surname' => $validatedData['surname']
             ];
             $newUser = $this->model->checkAccount($accountData, 'users');
             if ($newUser === true) {
@@ -49,8 +48,6 @@ class AccountController extends AppController
         } else {
             $this->getView('registration', $params, 'user');
         }
-
-
     }
 
     public function activationAction($params)
@@ -62,13 +59,14 @@ class AccountController extends AppController
         } else {
             exit(require_once '404.php');
         }
-
-
     }
 
-    public function succesAction()
+    public function successAction()
     {
+        $params = [
+          'title' => 'success',
+        ];
 
-        $this->getView('succes');
+        $this->getView('success', $params);
     }
 }

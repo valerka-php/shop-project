@@ -21,8 +21,7 @@ class ProductController extends AppController
         $params = [
             'title' => $_GET['type'],
         ];
-        $this->getView('products', $params, 'product');
+
+        $this->getView('products', $params);
     }
-
-
 }

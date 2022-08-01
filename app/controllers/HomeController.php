@@ -21,14 +21,15 @@ class HomeController extends AppController
 //        $list = require '../temp/inventory/product_list.php';
 //        $model = new Product();
 //        $model->addProducts($list);
+        $params = [
+            'title' => 'Home page',
+        ];
 
-        $this->getView('home');
-
+        $this->getView('home', $params);
     }
 
     public function testAction(): void
     {
         echo 'Home controller testController action';
-//        Logger::log(LogLevel::NOTICE, "open testAction\r");
     }
 }

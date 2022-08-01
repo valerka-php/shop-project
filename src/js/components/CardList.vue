@@ -8,6 +8,7 @@
     <card-footer
         :price="product.price"
         :count="product.count"
+        :addProduct="product"
     ></card-footer>
   </div>
 </template>
@@ -23,12 +24,24 @@ export default {
     async fetchProduct() {
       const typeName = window.location.search.split('=');
       const response = await axios.get(`http://nixproject.ua/application/product/?type=${typeName[1]}`);
-      this.products = response.data;
+      this.products = response.data
+      this.cart = this.$root.$data.cartList
+      this.updateCart(this.products,this.cart)
     },
+    updateCart(productList,cartList){
+      for (let key in cartList){
+        for (let id in productList){
+          if (productList[id].id === cartList[key].id){
+            this.products[id].isAdd = true;
+          }
+        }
+      }
+    }
   },
   data() {
-    return {
-      products: []
+    return{
+      products: {},
+      cart: {},
     }
   },
   mounted() {

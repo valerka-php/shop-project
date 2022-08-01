@@ -1,8 +1,13 @@
 <?php
+    if  (!isset($_SESSION['user'])){
+        header("location:/user/login");
+    }
+
     if (isset($_POST['logout'])){
         unset($_SESSION['user']);
         header('location:/');
     }
+
 ?>
 
 

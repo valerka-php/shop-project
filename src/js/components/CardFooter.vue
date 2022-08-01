@@ -1,6 +1,8 @@
 <template>
   <div class="card-footer">
-    <btn-purchase v-bind:counts="count"></btn-purchase>
+    <btn-purchase
+        :product="product"
+        :counts="count"></btn-purchase>
     <p v-if="count < 1" class="price"> sold out </p>
     <p v-else class="price"> {{ price }} USD </p>
   </div>
@@ -11,12 +13,20 @@
 
 <script>
 export default {
+  data(){
+    return{
+      product : this.addProduct
+    }
+  },
   props: {
     count: {
       type: Number,
     },
     price: {
       type: Number,
+    },
+    addProduct: {
+      type: Object,
     }
   },
   name: "CardFooter"
