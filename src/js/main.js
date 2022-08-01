@@ -1,8 +1,7 @@
 import  { createApp } from "vue";
 import CardList from "./components/CardList";
 import components from "./components/UI/index"
-import MiniCartBody from "./components/MiniCartBody";
-import MiniCartButton from "./components/UI/MiniCartButton";
+import store from "./components/store";
 
 
 const app = createApp({
@@ -16,6 +15,10 @@ const app = createApp({
             if (localStorage.getItem('cart')) {
                 this.cartList = JSON.parse(localStorage.getItem('cart'))
             }
+
+            if (localStorage.getItem('totalPrice')) {
+                this.$store.state.totalPriceProducts = JSON.parse(localStorage.getItem('totalPrice'))
+            }
         },
     },
     mounted() {
@@ -27,7 +30,6 @@ components.forEach(component => {
     app.component(component.name,component)
 });
 
+app.use(store)
 app.component('card-list', CardList)
-app.component('mini-cart-button', MiniCartButton)
-app.component('mini-card-body', MiniCartBody)
 app.mount('#app')

@@ -18,7 +18,7 @@
 <header class="header">
     <?php require_once '../app/views/layouts/header.php' ?>
 </header>
-<mini-card-body></mini-card-body>
+<mini-cart-body></mini-cart-body>
 <div class="product">
     <card-list></card-list>
 </div>

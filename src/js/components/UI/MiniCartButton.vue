@@ -12,13 +12,12 @@
 
 <script>
 export default {
-  name: "MiniCartButton",
+  name: "mini-cart-button",
   computed:{
     getCountProducts(){
       return  this.$root.$data.cartList.length
     }
   }
-
 }
 </script>
 

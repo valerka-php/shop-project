@@ -39,6 +39,8 @@ export default {
     saveToCart(){
       this.isAdd = true
       this.$root.$data.cartList.push(this.$data)
+      this.$store.commit('calculatePrice',this.price)
+      this.$store.commit('saveToLocalStorage')
       this.saveToStorage()
     },
     saveToStorage(){
