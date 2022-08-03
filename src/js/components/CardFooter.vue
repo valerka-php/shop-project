@@ -3,11 +3,11 @@
     <btn-purchase
         :product="product"
     ></btn-purchase>
-    <p v-if="product.count < 1" class="price"> sold out </p>
+    <p v-if="product.count < 1" class="price"> <s> {{ product.price }} USD </s> </p>
     <p v-else class="price"> {{ product.price }} USD </p>
   </div>
-  <div class="card-footer">
-    <p class="count">count: {{ product.count }} </p>
+  <div class="count-footer">
+    <p class="count">items left: {{ product.count }} </p>
   </div>
 </template>
 

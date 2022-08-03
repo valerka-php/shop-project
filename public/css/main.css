@@ -240,12 +240,15 @@
 
 
 .count{
-    color: forestgreen;
+    color: #1b81ec;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
 }
 
 .price {
     font-size: 25px;
-    color: red;
+    color: #1312e4;
 }
 
 .product{
@@ -278,22 +281,26 @@
     height: 220px;
 }
 
-.add-to-cart:hover{
+.add-to-cart:hover,.product-almost-sold-out:hover{
     background-color: forestgreen;
-    color: black;
+    color: white;
 }
 
-.add-to-cart:active{
+.add-to-cart:active,.product-almost-sold-out:active{
     background-color: white;
 }
 
-.add-to-cart{
-    width: 95px;
+.add-to-cart,.product-almost-sold-out{
+    background-color: #7ba3de;
+    border: none;
+    color: black;
+    width: auto;
     height: 45px;
+    border-radius: 25px;
 }
 
 .product-almost-sold-out{
-    background-color: #eee25a;
+    background-color: #ece6a2;
 }
 
 
@@ -301,6 +308,7 @@
     background-color: darkgrey;
     width: 95px;
     height: 45px;
+    border-radius: 25px;
 }
 
 .cart-product{

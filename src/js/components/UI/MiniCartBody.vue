@@ -10,6 +10,7 @@
         <div class="modal-order" id="cart-list" v-if="getCartList.length > 0 ">
           <div v-for="product in getCartList">
               <mini-cart-list class="cart-product"
+                              :key="product.id"
                               :id="product.id"
                               :title="product.title"
                               :image="product.image"

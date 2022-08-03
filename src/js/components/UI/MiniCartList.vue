@@ -16,7 +16,7 @@
               class="btn plus bi bi-plus"></button>
         </div>
         <button
-            @click="remove"
+            @click="remove()"
             class="btn bi bi-trash3"
         ></button>
       </div>
@@ -73,14 +73,17 @@ export default {
       }
     },
     remove(){
-      for (let key in this.$root.$data.cartList){
-        // console.log(this.$root.$data.cartList[key].id)
-        // console.log(this.id)
-          if (this.$root.$data.cartList[key].id === this.id){
+      let total = this.price * this.totalInCart
+      this.$store.commit('recalculatePrice',total)
+      this.$root.$data.cartList = this.$root.$data.cartList.filter(item => item.id !== this.id);
 
-          }
+      for (let key in this.$root.$data.products){
+        if (this.$root.$data.products[key].id === this.id){
+          this.$root.$data.products[key].isAdd = false
+        }
       }
-      // localStorage.setItem('cart', JSON.stringify(this.$root.$data.cartList))
+
+      localStorage.setItem('cart', JSON.stringify(this.$root.$data.cartList))
     }
   },
   name: "mini-cart-list"

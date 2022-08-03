@@ -1,5 +1,5 @@
 <template>
-  <div class="card" v-for="product in products">
+  <div class="card" v-for="product in this.$root.$data.products">
     <card-body
         :image="product.image"
         :title="product.title"
@@ -22,16 +22,17 @@ export default {
     async fetchProduct() {
       const typeName = window.location.search.split('=');
       const response = await axios.get(`http://nixproject.ua/application/product/?type=${typeName[1]}`);
-      this.products = response.data
+      this.$root.$data.products = response.data
       this.cart = this.$root.$data.cartList
-      this.updateCart(this.products,this.cart)
+      this.updateProductList(this.$root.$data.products,this.cart)
+      console.log(this.$root.$data.products)
     },
-    updateCart(productList,cartList){
+    updateProductList(productList,cartList){
       for (let key in cartList){
         for (let id in productList){
           if (productList[id].id === cartList[key].id){
-            this.products[id].isAdd = true;
-            this.products[id].itemsInCart = cartList[key].itemsInCart;
+            this.$root.$data.products[id].isAdd = true;
+            this.$root.$data.products[id].itemsInCart = cartList[key].itemsInCart;
           }
         }
       }
@@ -39,7 +40,6 @@ export default {
   },
   data() {
     return{
-      products: {},
       cart: {},
     }
   },
