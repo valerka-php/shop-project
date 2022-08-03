@@ -5,15 +5,18 @@
       <div class="modal-content">
         <div class="modal-header ">
           <h5 class="modal-title" id="staticBackdropLabel">Order list</h5>
+          <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">X</button>
         </div>
         <div class="modal-order" id="cart-list" v-if="getCartList.length > 0 ">
           <div v-for="product in getCartList">
-            <mini-cart-list class="cart-product"
-                            :id="product.id"
-                            :title="product.title"
-                            :image="product.image"
-                            :price="product.price"
-            ></mini-cart-list>
+              <mini-cart-list class="cart-product"
+                              :id="product.id"
+                              :title="product.title"
+                              :image="product.image"
+                              :price="product.price"
+                              :count="product.totalCount"
+                              :itemsInCart="product.itemsInCart"
+              ></mini-cart-list>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">back</button>
@@ -21,7 +24,7 @@
             <button type="button" class="btn btn-primary">pay</button>
           </div>
         </div>
-        <div class="modal-order" v-else> cart is empty</div>
+        <div class="modal-order" v-else> cart is empty </div>
       </div>
     </div>
   </div>

@@ -6,9 +6,7 @@
         :description="product.description"
     ></card-body>
     <card-footer
-        :price="product.price"
-        :count="product.count"
-        :addProduct="product"
+        :product="product"
     ></card-footer>
   </div>
 </template>
@@ -33,6 +31,7 @@ export default {
         for (let id in productList){
           if (productList[id].id === cartList[key].id){
             this.products[id].isAdd = true;
+            this.products[id].itemsInCart = cartList[key].itemsInCart;
           }
         }
       }

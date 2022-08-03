@@ -1,5 +1,6 @@
 import {createStore} from "vuex";
 
+
 export default createStore({
     state:{
         totalPriceProducts: 0,
@@ -7,11 +8,13 @@ export default createStore({
     mutations:{
         calculatePrice(state,price){
             state.totalPriceProducts += price
+            this.commit('saveLocalPrice')
         },
         recalculatePrice(state,price){
             state.totalPriceProducts -= price
+            this.commit('saveLocalPrice')
         },
-        saveToLocalStorage(state){
+        saveLocalPrice(state){
             localStorage.setItem('totalPrice',state.totalPriceProducts)
         },
     },
