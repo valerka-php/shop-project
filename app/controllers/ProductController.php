@@ -4,6 +4,7 @@ namespace App\controllers;
 
 use App\models\Home;
 use App\models\Product;
+use Framework\helpers\Helper;
 use Framework\helpers\Session;
 
 class ProductController extends AppController

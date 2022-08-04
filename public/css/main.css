@@ -4,6 +4,13 @@
     margin-left: 200px;
 }
 
+.cart-payment{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
 .home{
     display: flex;
     align-items: center;
@@ -255,7 +262,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 75px 35px 35px;
+    margin-top: 45px;
+    padding-top: 55px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #dcf2dd;
 }
 
 .card{
@@ -276,9 +287,16 @@
     align-items: baseline;
 }
 
+.card-title{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .card-body{
-    width: 275px;
-    height: 220px;
+    width: 334px;
+    height: auto;
+    background-color: gainsboro;
 }
 
 .add-to-cart:hover,.product-almost-sold-out:hover{

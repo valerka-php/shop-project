@@ -22,7 +22,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">back</button>
             <div class="modal-price" > total price: {{ $store.state.totalPriceProducts }} USD</div>
-            <button type="button" class="btn btn-primary">pay</button>
+            <a class="btn btn-primary" @click="sendApiCart()" href="/payment/">pay</a>
           </div>
         </div>
         <div class="modal-order" v-else> cart is empty </div>
@@ -42,6 +42,19 @@ export default {
   },
   components: {MiniCartList},
   name: "mini-cart-body",
+  methods:{
+    sendApiCart(){
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      let price = JSON.parse(localStorage.getItem('totalPrice'));
+      let total = {cart,price}
+
+      let request;
+      request = new XMLHttpRequest()
+      request.open("POST", "http://nixproject.ua/application/cart", true)
+      request.setRequestHeader("Content-type", "application/json")
+      request.send(JSON.stringify(total))
+    }
+  }
 }
 </script>
 

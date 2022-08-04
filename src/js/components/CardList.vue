@@ -25,7 +25,6 @@ export default {
       this.$root.$data.products = response.data
       this.cart = this.$root.$data.cartList
       this.updateProductList(this.$root.$data.products,this.cart)
-      console.log(this.$root.$data.products)
     },
     updateProductList(productList,cartList){
       for (let key in cartList){

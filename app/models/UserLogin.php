@@ -9,7 +9,7 @@ class UserLogin extends User
     public function checkUser(string $login, string $password): string|array
     {
         $sql = "
-            SELECT users.login,users.password,users.verified,users_data.name
+            SELECT users.login,users.email,users.password,users.verified,users_data.name
             FROM users
             INNER JOIN users_data ON users_data.id = users.id 
            ";

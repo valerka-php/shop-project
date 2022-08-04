@@ -36,6 +36,7 @@ class UserController extends AppController
             if (is_array($checked)) {
                 Session::set('user', $checked['login']);
                 Session::set('userName', $checked['name']);
+                Session::set('userEmail', $checked['email']);
                 header("location:/user/profile/");
             }
         }

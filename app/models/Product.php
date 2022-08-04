@@ -24,7 +24,6 @@ class Product extends BaseModel
                 $this->insertOne("count", "{$products[$i]['count']}", 'count_product');
                 $this->insertOne("price", "{$products[$i]['price']}", 'price_product');
                 $this->insertOne("type_id", "$typeId", 'product_has_type');
-
             }
         }
     }
@@ -43,6 +42,5 @@ class Product extends BaseModel
 
         return $this->connect->get($sql);
     }
-
 
 }
