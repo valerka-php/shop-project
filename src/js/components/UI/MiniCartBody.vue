@@ -25,7 +25,7 @@
             <a class="btn btn-primary" @click="sendApiCart()" href="/payment/">pay</a>
           </div>
         </div>
-        <div class="modal-order" v-else> cart is empty </div>
+        <div class="modal-order" v-else><img src="/images/empty-cart.png"></div>
       </div>
     </div>
   </div>

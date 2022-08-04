@@ -17,7 +17,6 @@
     <a class="btn btn-outline-light bi bi-house" href="/"></a>
 </div>
 <div class="contacts">
-    <button type="button" class="btn btn-outline-light bi bi-at"></button>
     <button type="button" class="btn btn-outline-light bi bi-telegram"></button>
     <button type="button" class="btn btn-outline-light bi bi-telephone"></button>
 </div>

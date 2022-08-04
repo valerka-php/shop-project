@@ -4,7 +4,7 @@
       v-if="totalCount > 10"
       class="btn btn-primary add-to-cart"
       :class="{active : this.product.isAdd }"
-  > {{ this.product.isAdd ? 'added to cart' : 'pruchase' }}
+  > {{ this.product.isAdd ? 'added to cart' : 'purchase' }}
   </button>
   <button
       @click="saveToCart"

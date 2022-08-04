@@ -14,7 +14,6 @@
 
 </head>
 <body id="app">
-
 <header class="header">
     <?php require_once '../app/views/layouts/header.php' ?>
 </header>
@@ -22,7 +21,6 @@
 <div class="product">
     <card-list></card-list>
 </div>
-
 <script src="/js/main.js"></script>
 </body>
 </html>

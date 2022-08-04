@@ -4,7 +4,6 @@
             data-bs-target="#staticBackdrop">
      <span v-show="getCountProducts >= 1" class="position-absolute top-0 start-100 translate-middle badge badge-pos rounded-pill bg-danger">
       {{ getCountProducts }}
-    <span class="visually-hidden">unread messages</span>
   </span>
     </button>
   </div>
@@ -23,8 +22,8 @@ export default {
 
 <style scoped>
 .badge-pos{
-  margin-left: -77px;
-  margin-top: 10px;
+  margin-left: -96px;
+  margin-top: 15px;
 }
 
 .cart-pos{

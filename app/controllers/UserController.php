@@ -52,6 +52,6 @@ class UserController extends AppController
         ];
 
 
-        $this->getView('profile', $params, 'user');
+        $this->getView('profile', $params, 'profile');
     }
 }

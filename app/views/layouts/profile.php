@@ -15,5 +15,7 @@
 <body>
 <div class="profile btn-home-login">
     <a class="btn btn-outline-light bi bi-house" href="/"></a>
+    <form action="" method="post" class="form">
+        <button type="submit" class="btn btn-outline-light bi bi-door-closed" name="logout"></button>
+    </form>
 </div>
-
