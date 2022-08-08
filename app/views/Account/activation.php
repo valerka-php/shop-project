@@ -1,4 +1,3 @@
-
-<h1> your account has been activated =) </h1>
+<h1 class="activate"> your account has been activated </h1>
 
 

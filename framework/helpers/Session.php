@@ -21,5 +21,4 @@ class Session
     {
         unset($_SESSION["$value"]);
     }
-
 }

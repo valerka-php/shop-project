@@ -2,30 +2,58 @@
 
 namespace App\controllers;
 
-use App\models\User;
-use Framework\helpers\Helper;
+use App\models\UserLogin;
 use Framework\helpers\Session;
-use Framework\helpers\Validator;
+use Valerjan\log\LogLevel;
+use Valerjan\Logger;
 
 class UserController extends AppController
 {
-    private User $model;
-
     public function __construct(string $route)
     {
         parent::__construct($route);
-        $this->model = new User();
     }
 
     public function loginAction()
     {
         $params = [
-            'testController' => 'qwerty',
-            'test2' => '123',
             'title' => 'login'
         ];
-        $this->getView('login', $params ,'user');
-//        Logger::log(LogLevel::NOTICE, "open loginAction\r");
+
+        if (isset($_SESSION['user'])) {
+            header("location:/user/profile/");
+        }
+
+        if (!empty($_POST)) {
+            $checkUser = new UserLogin();
+            $checked = $checkUser->checkUser($_POST['login'], $_POST['password']);
+
+            if (is_array($checked)) {
+                Session::set('user', $checked['login']);
+                Session::set('userName', $checked['name']);
+                Session::set('userEmail', $checked['email']);
+                Logger::log(
+                    LogLevel::NOTICE,
+                    "User sign-in {$checked['email']}",
+                    __FILE__,
+                    __LINE__,
+                    'user.txt'
+                );
+                header("location:/user/profile/");
+            }
+        }
+
+        $this->getView('login', $params, 'user');
     }
 
+    public function profileAction()
+    {
+        $params = [
+            'name' => $_SESSION['userName'],
+            'title' => 'profile'
+        ];
+
+
+        $this->getView('profile', $params, 'profile');
+    }
 }

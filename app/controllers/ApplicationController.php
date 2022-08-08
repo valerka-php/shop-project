@@ -13,4 +13,10 @@ class ApplicationController
         header('Content-Type: application/json; charset=utf-8');
         echo json_encode($data);
     }
+
+    public function cartAction()
+    {
+        $data = file_get_contents('php://input');
+        $_SESSION['cart'] = $data;
+    }
 }

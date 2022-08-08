@@ -1,5 +1,8 @@
-<?php use Framework\helpers\Session; ?>
+<?php
 
+use Framework\helpers\Session;
+
+?>
 
 <div class="sing-in-form">
     <form action="" method="post">
@@ -19,7 +22,7 @@
             <a href="/account/registration"> You haven`t account? </a>
         </div>
 
-        <div>
+        <div class="message">
             <?php Session::showMessage(); ?>
         </div>
     </form>
