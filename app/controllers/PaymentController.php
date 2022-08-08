@@ -5,6 +5,7 @@ namespace App\controllers;
 use App\models\Payment;
 use Framework\helpers\Mailer;
 use Framework\helpers\Session;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
 class PaymentController extends AppController
 {
@@ -17,8 +18,15 @@ class PaymentController extends AppController
     }
 
 
+    /**
+     * @throws TransportExceptionInterface
+     */
     public function indexAction()
     {
+        $params = [
+            'title' => 'payment'
+        ];
+
         $purchasedItemsAndPrice = json_decode($_SESSION['cart'], true);
 
         if (!isset($_SESSION['userEmail'])) {
@@ -30,7 +38,7 @@ class PaymentController extends AppController
             Session::set('message', 'We sent invoice to email');
         }
 
-        $this->getView('success');
+        $this->getView('success', $params);
     }
 
 

@@ -2,25 +2,29 @@
 
 namespace Framework\core;
 
+use Exception;
+use PDO;
+use PDOException;
 use Valerjan\Logger;
 use Valerjan\log\LogLevel;
 
 class Db
 {
-    protected \PDO $pdo;
+    protected PDO $pdo;
     public object $instance;
-    public string $dsn,$user,$pass;
+    public string $dsn;
+    public string $user;
+    public string $pass;
 
     public function __construct()
     {
         $options = [
-            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
-            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ];
 
         $this->setConfig();
-        $this->pdo = new \PDO("$this->dsn", "$this->user", "$this->pass", $options);
-
+        $this->pdo = new PDO("$this->dsn", "$this->user", "$this->pass", $options);
     }
 
     private function setConfig(): void
@@ -30,7 +34,6 @@ class Db
         $this->dsn = $config['dsn'];
         $this->user = $config['user'];
         $this->pass = $config['pass'];
-
     }
 
     public function getInstance(): object
@@ -50,11 +53,15 @@ class Db
             if ($prepare->execute()) {
                 return $prepare->fetchAll();
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             $msg = $e->getMessage();
-            $line = $e->getLine();
-            $file = $e->getFile();
-            Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
+            Logger::log(
+                LogLevel::ERROR,
+                "$msg",
+                __FILE__,
+                __LINE__,
+                'databaseLog.txt'
+            );
             return false;
         }
     }
@@ -69,17 +76,18 @@ class Db
         try {
             if ($updateRows >= 1) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $msg = $e->getMessage();
-            $line = $e->getLine();
-            $file = $e->getFile();
-            Logger::log(LogLevel::ERROR,"$msg","$line","$file",'databaseLog.txt');
+            Logger::log(
+                LogLevel::ERROR,
+                "$msg",
+                __FILE__,
+                __LINE__,
+                'databaseLog.txt'
+            );
         }
     }
-
-
-
 }

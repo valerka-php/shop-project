@@ -2,6 +2,7 @@
 
 namespace Framework\helpers;
 
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\Transport;
 use Symfony\Component\Mime\Email;
 
@@ -26,6 +27,9 @@ class Mailer
         self::$txt = '<h1 style="text-align: center;color: chocolate"> Dear ' . $name . ' ' . $body . $vkey . '</h1>';
     }
 
+    /**
+     * @throws TransportExceptionInterface
+     */
     public static function confirmationEmail(string $email, string $name, string $vkey): void
     {
         self::setConfig();
@@ -43,6 +47,9 @@ class Mailer
     }
 
 
+    /**
+     * @throws TransportExceptionInterface
+     */
     public static function sendInvoice(string $email, string $txt): bool
     {
         self::setConfig();

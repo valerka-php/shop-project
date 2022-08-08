@@ -2,10 +2,7 @@
 
 namespace App\controllers;
 
-use App\models\Home;
 use App\models\Product;
-use Framework\helpers\Helper;
-use Framework\helpers\Session;
 
 class ProductController extends AppController
 {
@@ -22,6 +19,9 @@ class ProductController extends AppController
         $params = [
             'title' => $_GET['type'],
         ];
+
+        $category = $this->model->getCategory();
+        $params['category'] = $category;
 
         $this->getView('products', $params);
     }

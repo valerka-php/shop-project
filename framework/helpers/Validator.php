@@ -32,18 +32,11 @@ class Validator
             header('location: /account/registration');
             exit();
         } elseif ($pass != $confirmPass) {
-            Session::set('message', 'Your passwords don`t match');
+            Session::set('message', 'Your passwords doesn`t match');
             header('location: /account/registration');
             exit();
         } else {
             return true;
         }
     }
-
-    private static function getVKey()
-    {
-
-    }
-
-
 }

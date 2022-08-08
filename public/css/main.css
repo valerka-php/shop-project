@@ -11,6 +11,12 @@
     justify-content: space-evenly;
 }
 
+.msg{
+    padding-top: 20px;
+    font-size: 23px;
+    color: #ec0a0a;
+}
+
 .home{
     display: flex;
     align-items: center;
@@ -182,7 +188,7 @@
 
 .modal-content {
     height: auto;
-    min-height: 500px;
+    min-height: 120px;
     max-height: 850px;
     width: 680px;
     display: flex;

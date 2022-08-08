@@ -3,7 +3,6 @@
 namespace Framework\core;
 
 use JetBrains\PhpStorm\ArrayShape;
-use Framework\core\Db;
 
 class BaseModel
 {
@@ -16,7 +15,8 @@ class BaseModel
     }
     /**
      * @param array $array Data which you need insert into the table
-     * @return array Returns array strings prepared to sql request  (array[title] = title column , array[values] = value row)
+     * @return array Returns array strings prepared to sql request
+     * (array[title] = title column , array[values] = value row)
      ** example "INSERT id,name,surname INTO "yourTable" VALUES  (1,Valerii,Nyzhnui);
      */
     #[ArrayShape(['title' => "string", 'values' => "string"])]
@@ -43,13 +43,13 @@ class BaseModel
         return $this->connect->get($request);
     }
 
-    public function getOneWhere(string $column,string $where,string $table): array | bool
+    public function getOneWhere(string $column, string $where, string $table): array | bool
     {
         $request = "SELECT * FROM $table WHERE $column = '$where'";
         return $this->connect->get($request);
     }
 
-    public function getAll($table,$title = '*'): bool|array
+    public function getAll($table, $title = '*'): bool|array
     {
         $sql = "SELECT $title FROM $table";
         return $this->connect->get($sql);
@@ -69,7 +69,7 @@ class BaseModel
         return $this->connect->send($request);
     }
 
-    public function insertOne(string $column,string $value,string $table)
+    public function insertOne(string $column, string $value, string $table)
     {
         $sql = "INSERT INTO $table ($column) VALUES ($value)";
         return $this->connect->send($sql);
@@ -80,6 +80,4 @@ class BaseModel
         $sql = "INSERT INTO $table ($column) VALUES ($value) = $where";
         return $this->connect->send($sql);
     }
-
-
 }

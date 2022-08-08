@@ -1,4 +1,8 @@
-<?php use Framework\helpers\Session; ?>
+<?php
+
+use Framework\helpers\Session;
+
+?>
 
 <div class="sing-in-form">
     <form action="" method="post">

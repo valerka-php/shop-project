@@ -7,6 +7,8 @@ use App\models\AccountActivation;
 use Framework\helpers\Helper;
 use Framework\helpers\Mailer;
 use Framework\helpers\Validator;
+use Valerjan\log\LogLevel;
+use Valerjan\Logger;
 
 class AccountController extends AppController
 {
@@ -41,6 +43,13 @@ class AccountController extends AppController
                 $this->model->insertIntoTable($accountData, 'users');
                 $this->model->insertIntoTable($userData, 'users_data');
                 Mailer::confirmationEmail($accountData['email'], $validatedData['name'], $accountData['vkey']);
+                Logger::log(
+                    LogLevel::NOTICE,
+                    "User [{$accountData['email']}] has been created ",
+                    __FILE__,
+                    __LINE__,
+                    "user.txt"
+                );
                 header('location: /account/succes');
             } else {
                 header('location: /account/registration');
@@ -50,14 +59,19 @@ class AccountController extends AppController
         }
     }
 
-    public function activationAction($params)
+    public function activationAction()
     {
+        $params = [
+          'title' => 'Activation'
+        ];
+
+        $code = $_GET['code'];
         $model = new AccountActivation();
-        $confirmed = $model->activate(implode($params));
+        $confirmed = $model->activate($code);
         if ($confirmed) {
             $this->getView('activation', $params, 'user');
         } else {
-            exit(require_once '404.php');
+            require_once '404.php';
         }
     }
 

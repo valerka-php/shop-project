@@ -6,3 +6,4 @@
 18:07:42  | error | databaseLog.txt | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
 18:07:26  | error | databaseLog.txt | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
 18:07:40  | error | databaseLog.txt | line : 66 | SQLSTATE[HY000]: General error: 1364 Field 'vkey' doesn't have a default value
+12:08:24  | notice | user.tx | line :  | User sign in nyshnui@gmail.com

@@ -2,17 +2,11 @@
 
 namespace Framework\helpers;
 
-use Swift_Mailer;
-use Swift_Message;
-use Swift_SmtpTransport;
-use Symfony\Component\Mailer\Mailer;
-use Symfony\Component\Mailer\Transport;
-use Symfony\Component\Mime\Email;
+use JetBrains\PhpStorm\NoReturn;
 
 class Helper
 {
-
-    public static function dd(array $arr)
+    #[NoReturn] public static function dd(array $arr): void
     {
         echo '<pre>';
         var_dump($arr);

@@ -2,6 +2,9 @@
 
 namespace Framework\core;
 
+use Valerjan\log\LogLevel;
+use Valerjan\Logger;
+
 class Router
 {
     private array $route = ['controller' => 'home', 'action' => 'index'];
@@ -34,10 +37,24 @@ class Router
                 $cObj = new $class($this->route['controller']);
                 $cObj->$action();
             } else {
-                echo '404 EROR';
+                Logger::log(
+                    LogLevel::CRITICAL,
+                    "Method doesn`t exist [$action] in [$class]",
+                    __FILE__,
+                    __LINE__,
+                    'router.txt'
+                );
+                exit(require_once '404.php');
             }
         } else {
-            echo '404 EROR';
+            Logger::log(
+                LogLevel::CRITICAL,
+                "Class doesn`t exist [$class]",
+                __FILE__,
+                __LINE__,
+                'router.txt'
+            );
+            exit(require_once '404.php');
         }
     }
 
@@ -46,5 +63,4 @@ class Router
         $obj = new self();
         $obj->match($request);
     }
-
 }

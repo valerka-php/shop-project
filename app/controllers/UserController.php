@@ -2,21 +2,16 @@
 
 namespace App\controllers;
 
-use App\models\Product;
-use App\models\User;
 use App\models\UserLogin;
-use Framework\helpers\Helper;
 use Framework\helpers\Session;
-use Framework\helpers\Validator;
+use Valerjan\log\LogLevel;
+use Valerjan\Logger;
 
 class UserController extends AppController
 {
-    private User $model;
-
     public function __construct(string $route)
     {
         parent::__construct($route);
-        $this->model = new User();
     }
 
     public function loginAction()
@@ -37,6 +32,13 @@ class UserController extends AppController
                 Session::set('user', $checked['login']);
                 Session::set('userName', $checked['name']);
                 Session::set('userEmail', $checked['email']);
+                Logger::log(
+                    LogLevel::NOTICE,
+                    "User sign-in {$checked['email']}",
+                    __FILE__,
+                    __LINE__,
+                    'user.txt'
+                );
                 header("location:/user/profile/");
             }
         }

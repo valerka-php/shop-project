@@ -10,11 +10,13 @@ class UserLogin extends User
     {
         $sql = "
             SELECT users.login,users.email,users.password,users.verified,users_data.name
-            FROM users
+            FROM users 
             INNER JOIN users_data ON users_data.id = users.id 
+            WHERE login = '$login'
            ";
 
         $user = $this->connect->get($sql);
+
 
         if (!$user) {
             return Session::set('message', 'Incorrect login or password');
