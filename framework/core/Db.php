@@ -55,13 +55,6 @@ class Db
             }
         } catch (PDOException $e) {
             $msg = $e->getMessage();
-            Logger::log(
-                LogLevel::ERROR,
-                "$msg",
-                __FILE__,
-                __LINE__,
-                'databaseLog.txt'
-            );
             return false;
         }
     }
@@ -81,13 +74,6 @@ class Db
             }
         } catch (Exception $e) {
             $msg = $e->getMessage();
-            Logger::log(
-                LogLevel::ERROR,
-                "$msg",
-                __FILE__,
-                __LINE__,
-                'databaseLog.txt'
-            );
         }
     }
 }

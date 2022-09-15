@@ -37,23 +37,9 @@ class Router
                 $cObj = new $class($this->route['controller']);
                 $cObj->$action();
             } else {
-                Logger::log(
-                    LogLevel::CRITICAL,
-                    "Method doesn`t exist [$action] in [$class]",
-                    __FILE__,
-                    __LINE__,
-                    'router.txt'
-                );
                 exit(require_once '404.php');
             }
         } else {
-            Logger::log(
-                LogLevel::CRITICAL,
-                "Class doesn`t exist [$class]",
-                __FILE__,
-                __LINE__,
-                'router.txt'
-            );
             exit(require_once '404.php');
         }
     }

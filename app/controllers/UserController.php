@@ -32,13 +32,6 @@ class UserController extends AppController
                 Session::set('user', $checked['login']);
                 Session::set('userName', $checked['name']);
                 Session::set('userEmail', $checked['email']);
-                Logger::log(
-                    LogLevel::NOTICE,
-                    "User sign-in {$checked['email']}",
-                    __FILE__,
-                    __LINE__,
-                    'user.txt'
-                );
                 header("location:/user/profile/");
             }
         }

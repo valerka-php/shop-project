@@ -43,13 +43,6 @@ class AccountController extends AppController
                 $this->model->insertIntoTable($accountData, 'users');
                 $this->model->insertIntoTable($userData, 'users_data');
                 Mailer::confirmationEmail($accountData['email'], $validatedData['name'], $accountData['vkey']);
-                Logger::log(
-                    LogLevel::NOTICE,
-                    "User [{$accountData['email']}] has been created ",
-                    __FILE__,
-                    __LINE__,
-                    "user.txt"
-                );
                 header('location: /account/succes');
             } else {
                 header('location: /account/registration');
