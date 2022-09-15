@@ -59,7 +59,7 @@ class Product extends BaseModel
         return $this->connect->get($sql);
     }
 
-    public function getCategory(): array
+    public function getCategory(): bool|array
     {
         $sql = "SELECT `type` FROM type_product;";
         return $this->connect->get($sql);

@@ -54,7 +54,6 @@ class Db
                 return $prepare->fetchAll();
             }
         } catch (PDOException $e) {
-            $msg = $e->getMessage();
             return false;
         }
     }
