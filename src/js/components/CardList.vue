@@ -21,12 +21,12 @@ export default {
   methods: {
     async fetchProduct() {
       const typeName = window.location.search.split('=');
-      console.log(window.location.search);
-      console.log(typeName);
-      const response = await axios.get(`gentle-retreat-57670.herokuapp.com/application/product/?type=${typeName[1]}`);
+      const response = await axios.get(`https://gentle-retreat-57670.herokuapp.com/application/product/?type=${typeName[1]}`);
+      console.log(response);
       this.$root.$data.products = response.data
       this.cart = this.$root.$data.cartList
       this.updateProductList(this.$root.$data.products,this.cart)
+      console.log(this.$root.$data.products)
     },
     updateProductList(productList,cartList){
       for (let key in cartList){
