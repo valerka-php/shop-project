@@ -21,7 +21,7 @@ export default {
   methods: {
     async fetchProduct() {
       const typeName = window.location.search.split('=');
-      const response = await axios.get(`http://nixproject.ua/application/product/?type=${typeName[1]}`);
+      const response = await axios.get(`http://gentle-retreat-57670.herokuapp.com/application/product/?type=${typeName[1]}`);
       this.$root.$data.products = response.data
       this.cart = this.$root.$data.cartList
       this.updateProductList(this.$root.$data.products,this.cart)
