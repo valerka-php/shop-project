@@ -50,7 +50,7 @@ export default {
 
       let request;
       request = new XMLHttpRequest()
-      request.open("POST", "http://shop-project.ua/application/cart", true)
+      request.open("POST", "https://gentle-retreat-57670.herokuapp.com/application/cart", true)
       request.setRequestHeader("Content-type", "application/json")
       console.log(total)
       request.send(JSON.stringify(total))
