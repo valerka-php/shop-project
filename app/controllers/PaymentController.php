@@ -31,7 +31,7 @@ class PaymentController extends AppController
 
         if (isset($_SESSION['userEmail'])) {
             $invoice = $this->model->createInvoice($purchasedItemsAndPrice['cart'], $purchasedItemsAndPrice['price']);
-//            Mailer::sendInvoice($_SESSION['userEmail'], $invoice);
+            Mailer::sendInvoice($_SESSION['userEmail'], $invoice);
             Session::set('message', 'We sent invoice to email');
         } else {
             Session::set('message', 'Please sign in');
