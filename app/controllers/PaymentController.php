@@ -29,13 +29,13 @@ class PaymentController extends AppController
 
         $purchasedItemsAndPrice = json_decode($_SESSION['cart'], true);
 
-        if (!isset($_SESSION['userEmail'])) {
+        if (isset($_SESSION['userEmail'])) {
+            $invoice = $this->model->createInvoice($purchasedItemsAndPrice['cart'], $purchasedItemsAndPrice['price']);
+//            Mailer::sendInvoice($_SESSION['userEmail'], $invoice);
+            Session::set('message', 'We sent invoice to email');
+        } else {
             Session::set('message', 'Please sign in');
             header('location:/user/login');
-        } else {
-            $invoice = $this->model->createInvoice($purchasedItemsAndPrice['cart'], $purchasedItemsAndPrice['price']);
-            Mailer::sendInvoice($_SESSION['userEmail'], $invoice);
-            Session::set('message', 'We sent invoice to email');
         }
 
         $this->getView('success', $params);

@@ -25,7 +25,7 @@ class BaseModel
         $column = '';
         $value = '';
         foreach ($array as $k => $v) {
-            $column .= "`" . $k . "`,";
+            $column .= $k . ",";
             $value .= "'" . $v . "',";
         }
         $preparedColumn = substr($column, 0, -1);

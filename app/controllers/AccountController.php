@@ -42,7 +42,7 @@ class AccountController extends AppController
                 $accountData['vkey'] = $this->model->verifyKey;
                 $this->model->insertIntoTable($accountData, 'users');
                 $this->model->insertIntoTable($userData, 'users_data');
-                Mailer::confirmationEmail($accountData['email'], $validatedData['name'], $accountData['vkey']);
+//                Mailer::confirmationEmail($accountData['email'], $validatedData['name'], $accountData['vkey']);
                 header('location: /account/succes');
             } else {
                 header('location: /account/registration');

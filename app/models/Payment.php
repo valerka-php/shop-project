@@ -8,7 +8,7 @@ class Payment extends BaseModel
 {
     public function updateProductsQuantity(int $id, int $stock)
     {
-        $sql = "UPDATE count_product SET `count` = $stock WHERE (`count_id` = $id)";
+        $sql = "UPDATE count_product SET count = $stock WHERE (count_id = $id)";
 
         return $this->connect->send($sql);
     }
